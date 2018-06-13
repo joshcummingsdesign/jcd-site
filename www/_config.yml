@@ -32,10 +32,6 @@ exclude:
   - package-lock.json
 include: ['.htaccess']
 
-# Plugins
-plugins:
-  - jekyll-sitemap
-
 # Markdown settings
 markdown: kramdown
 kramdown:
