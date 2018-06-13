@@ -1,17 +1,23 @@
 # Josh Cumming Design
 
-## Getting Started
+### Requirements
 
-### Starting, watching, and stopping
-make start
-make watch
-make stop
+[Docker CE](https://www.docker.com/community-edition/)
+
+### Getting Started
+
+    $ make start
+    $ make watch
+    $ make stop
 
 ### Get blog posts from Medium
-make medium
+
+    $ make medium
 
 ### Update lock files
-make update-deps
+
+    $ make update-deps
 
 ### Help
-make help
+
+    $ make help
