@@ -1,0 +1,126 @@
+/*==================================
+=             Stage                =
+==================================*/
+
+.stage {
+  background-color: $black;
+  color: $white;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 15vh;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.stage-text {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  @include breakpoint($small) {
+    max-width: 600px;
+  }
+  @include breakpoint($medium) {
+    max-width: 700px;
+  }
+  @include breakpoint($xx-large) {
+    max-width: 900px;
+  }
+  @media only screen and (max-width: 736px) and (orientation: landscape) {
+    max-width: 500px;
+  }
+  @media only screen and (max-width: 640px) and (orientation: landscape) {
+    max-width: 420px;
+  }
+  @media only screen and (max-width: 550px) and (orientation: landscape) {
+    max-width: 310px;
+  }
+}
+
+.stage-text-inner {
+  position: absolute;
+  text-align: center;
+  h2 {
+    @media only screen and (max-width: 900px) and (orientation: landscape) {
+      font-size: 4.5vw;
+    }
+  }
+  p {
+    @media only screen and (max-width: 900px) and (orientation: landscape) {
+      font-size: 2.2vw;
+    }
+  }
+}
+
+#design-text, #development-text, #community-text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#heart-grid {
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  @include breakpoint($x-tiny) {
+    height: 200px;
+  }
+  @include breakpoint($tiny) {
+    height: 35vh;
+  }
+}
+
+#heart-fill {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.char {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.typed-text {
+  display: inline-block;
+  position: relative;
+  top: -2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: $green;
+  font-family: monospace;
+  font-size: 0.8rem;
+  @include breakpoint($x-tiny) {
+    font-size: 1.3rem;
+  }
+  @include breakpoint(900px) {
+    position: absolute;
+    font-size: 1.4rem;
+    top: 48%;
+    transform: translate(60%, -50%);
+  }
+  @media only screen and (max-width: 900px) and (orientation: landscape) {
+    position: absolute;
+    font-size: 1.2vw;
+    top: 48%;
+    transform: translate(60%, -50%);
+  }
+}
+
+#community-image-wrap {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 25vw;
+}
+
+#community-image {
+  overflow: visible;
+}
+
+.city-element {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.stage-image {
+  position: relative;
+}

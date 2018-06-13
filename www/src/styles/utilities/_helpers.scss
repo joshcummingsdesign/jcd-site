@@ -1,0 +1,92 @@
+/*==============================
+=            Helpers           =
+==============================*/
+
+.margin-regular {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+.green {
+  color: $green;
+}
+
+.padding-top {
+  padding-top: 6rem;
+
+  @include breakpoint($small) {
+    padding-top: 8rem;
+  }
+
+  @include breakpoint($medium) {
+    padding-top: 10rem;
+  }
+
+  @media only screen and (min-width: $small) and (max-height: 400px) {
+    padding-top: 8rem;
+  }
+
+  @media only screen and (min-height: 542px) and (max-width: 425px) {
+    padding-top: 8rem;
+  }
+}
+
+.padding-bottom {
+  padding-bottom: 6rem;
+
+  @include breakpoint($small) {
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint($medium) {
+    padding-bottom: 10rem;
+  }
+
+  @media only screen and (min-width: $small) and (max-height: 400px) {
+    padding-bottom: 8rem;
+  }
+
+  @media only screen and (min-height: 542px) and (max-width: 425px) {
+    padding-bottom: 8rem;
+  }
+}
+
+.margin-top {
+  margin-top: 6rem;
+
+  @include breakpoint($small) {
+    margin-top: 8rem;
+  }
+
+  @include breakpoint($medium) {
+    margin-top: 10rem;
+  }
+
+  @media only screen and (min-width: $small) and (max-height: 400px) {
+    margin-top: 8rem;
+  }
+
+  @media only screen and (min-height: 542px) and (max-width: 425px) {
+    margin-top: 8rem;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 6rem;
+
+  @include breakpoint($small) {
+    margin-bottom: 8rem;
+  }
+
+  @include breakpoint($medium) {
+    margin-bottom: 10rem;
+  }
+
+  @media only screen and (min-width: $small) and (max-height: 400px) {
+    margin-bottom: 8rem;
+  }
+
+  @media only screen and (min-height: 542px) and (max-width: 425px) {
+    margin-bottom: 8rem;
+  }
+}

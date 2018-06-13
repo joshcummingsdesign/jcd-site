@@ -1,0 +1,6 @@
+#!/bin/bash
+
+JEKYLL_CONTAINER=jcd_1
+PROD_USER=josh
+PROD_IP=162.243.140.178
+PROD_PATH=html/

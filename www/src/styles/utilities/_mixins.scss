@@ -1,0 +1,14 @@
+/*==============================
+=            Mixins            =
+==============================*/
+
+/*----------  Breakpoints  ----------*/
+
+// update allows for setting min or max width, defaults to min-width
+// for backwards compatability
+
+@mixin breakpoint($point, $minOrMax: min-width) {
+    @media ( $minOrMax: $point ) {
+        @content;
+    }
+}

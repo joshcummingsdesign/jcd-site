@@ -1,0 +1,52 @@
+/*==================================
+=             Footer               =
+==================================*/
+
+.contentinfo {
+  text-align: center;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 5rem 0;
+  li {
+    display: inline-block;
+    margin-left: -0.5rem;
+    @include breakpoint($x-tiny) {
+      margin-left: 0;
+    }
+    @include breakpoint($tiny) {
+      margin-left: 1rem;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  svg {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    @include breakpoint($x-tiny) {
+      width: 30px;
+      height: 30px;
+    }
+    @include breakpoint($tiny) {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+.social-link {
+  opacity: 0.5;
+  height: 50px;
+  width: 50px;
+  display: block;
+  transition: opacity $time $easing;
+  &:focus, &:hover {
+    opacity: 1;
+  }
+}

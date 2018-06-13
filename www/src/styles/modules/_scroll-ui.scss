@@ -1,0 +1,60 @@
+/*============================
+=         Scroll UI          =
+============================*/
+
+.scroll-ui {
+  height: 7.5rem;
+  position: absolute;
+  right: 0;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  width: 3rem;
+  @include breakpoint($x-tiny) {
+    width: 3.4rem;
+    height: 9rem;
+    top: 50%;
+  }
+  @include breakpoint(400px) {
+    height: 9rem;
+  }
+  @include breakpoint($tiny) {
+    height: 10rem;
+    width: 5.4rem;
+  }
+  &-line {
+    height: 100%;
+    width: 0.1rem;
+    display: block;
+    background-color: darken($green, 20%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    background-color: $green;
+    cursor: pointer;
+  }
+  &-dot-1 {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-dot-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-dot-3 {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}

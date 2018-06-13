@@ -1,0 +1,135 @@
+/*==================================
+=           Blog Archive           =
+==================================*/
+
+.blog-archive {
+  text-align: center;
+  background-color: $black;
+  color: $white;
+  h2 {
+    @include breakpoint($tiny) {
+      padding-top: 4rem;
+    }
+  }
+  p {
+    margin: 0;
+    color: $green;
+  }
+  a {
+    color: $white;
+  }
+  .btn {
+    @include breakpoint($tiny) {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.blog-archive-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  &:focus .blog-background-image, &:hover .blog-background-image {
+    transform: scale(1.07);
+  }
+  &:focus .more-posts-btn, &:hover .more-posts-btn {
+    bottom: 0;
+  }
+  &:focus .more-posts-btn:before, &:hover .more-posts-btn:before {
+    width: 100%;
+  }
+}
+
+.blog-background-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform $slow $easing;
+}
+
+.blog-archive-img-overlay {
+  position: absolute;
+  background-color: darken($black, 10%);
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: 1;
+  transform: translate(-1px, -1px);
+}
+
+.blog-archive-box {
+  overflow: hidden;
+  padding-top: 25rem;
+  background-color: $grey;
+  box-shadow: $shadow;
+  position: relative;
+  @include breakpoint($x-tiny) {
+    padding-top: 30rem;
+  }
+  @include breakpoint($tiny) {
+    padding-top: 40rem;
+  }
+}
+
+.blog-archive-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  backface-visibility: hidden;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  z-index: 1;
+}
+
+.more-posts-btn {
+  position: absolute;
+  bottom: -4rem;
+  left: 0;
+  width: 100%;
+  color: $white !important;
+  z-index: 1;
+  height: 4rem;
+  transition: bottom $fast $easing;
+  @include breakpoint($small) {
+    bottom: -5rem;
+    height: 5rem;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: $green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width $slow $easing;
+  }
+}
+
+.blog-archive-post {
+  margin-bottom: $space / 1.25;
+}
+
+.blog-archive-post:nth-child(2) {
+
+  @include breakpoint($small) {
+    padding-right: $space / 2.5;
+  }
+}
+
+.blog-archive-post:nth-child(3) {
+
+  @include breakpoint($small) {
+    padding-left: $space / 2.5;
+  }
+}

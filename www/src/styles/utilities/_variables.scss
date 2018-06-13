@@ -1,0 +1,46 @@
+/*=================================
+=            Variables            =
+=================================*/
+
+// Colors
+$green: #77af8b;
+$black: #3b3f44;
+$white: #f5f5f5;
+$grey: #7b7e81;
+$brand-primary: $green;
+
+// Breakpoints
+$x-tiny: 360px;
+$tiny: 480px;
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+$x-large: 1440px;
+$xx-large: 1700px;
+$xxx-large: 2000px;
+
+// Fonts
+$lato: 'Lato', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$normal: 300;
+$bold: 700;
+$x-bold: 900;
+
+// Typography
+$h4: 2.8rem;
+$h5: 2.4rem;
+$h6: 1.8rem;
+
+// Default Spacing
+$space: 25px;
+
+// Easing
+$fast: 0.2s;
+$time: 0.3s;
+$slow: 0.4s;
+$easing: ease-in-out;
+
+// Darken / Lighten
+$percentage: 7%;
+
+// Shadows
+$shadow: 2px 2px 4px 0 rgba(0,0,0,0.4);

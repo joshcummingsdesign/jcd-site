@@ -1,0 +1,71 @@
+/*==================================
+=              Nav                 =
+==================================*/
+
+.main-nav {
+  width: 100%;
+  clear: both;
+  min-height: 100vh;
+  height: auto;
+  position: absolute;
+  font-weight: $x-bold;
+  top: 0;
+  left: 0;
+  display: none;
+  .nav-contact a {
+    font-size: 3vh;
+    &:after {
+      height: 0.4vh;
+    }
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translateY(-50%) translateX(-50%);
+    li {
+      display: block;
+      margin-top: 4.5vh;
+      &:first-child {
+        margin-top: 0;
+      }
+      a {
+        font-size: 7vh;
+        display: inline-block;
+        color: $white;
+        text-transform: uppercase;
+        line-height: 1;
+        outline: 0;
+        &:after {
+          content: '';
+          display: block;
+          height: 0.8vh;
+          background-color: $white;
+          width: 100%;
+          transform: scaleX(0);
+          transition: transform $time $easing;
+        }
+        &:focus, &:hover {
+          color: $white;
+          &:after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-item {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#nav-contact {
+  display: none;
+}

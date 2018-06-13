@@ -1,0 +1,21 @@
+#### System Files ####
+.DS_Store
+tmp
+
+#### Editor Files ####
+.vscode
+
+#### Secrets ####
+keys/*
+!keys/.gitkeep
+
+#### Dependencies ####
+node_modules
+.sass-cache
+.jekyll-metadata
+npm-debug.log
+www/vendor
+
+#### Public ####
+www/html
+www/_site

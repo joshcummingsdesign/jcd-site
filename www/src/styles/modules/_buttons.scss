@@ -1,0 +1,70 @@
+/*============================
+=          Buttons           =
+============================*/
+
+.nav-toggle {
+  height: 54px;
+  width: 54px;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  border-radius: 100%;
+  transition: background-color $time $easing;
+  outline: 0;
+  visibility: hidden;
+  opacity: 0;
+  &:focus, &:hover {
+    background-color: rgba(119, 175, 139, 0.2);
+  }
+}
+
+.nav-line {
+  background-color: $black;
+  height: 4px;
+  width: 40px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-line-1 {
+  top: 13px;
+}
+
+.nav-line-2 {
+  top: 25px;
+}
+
+.nav-line-3 {
+  bottom: 13px;
+}
+
+.btn {
+  background-color: $green;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  border-radius: 5px;
+  transition: background-color $time $easing;
+  display: inline-block;
+  padding: 1.8rem 3.2rem;
+  font-size: 1.4rem;
+  color: $white;
+  @include breakpoint($tiny) {
+    padding: 2rem 3.4rem;
+    font-size: 1.6rem;
+  }
+  @include breakpoint($small) {
+    padding: 2.2rem 3.6rem;
+    font-size: 1.8rem;
+  }
+  &:focus, &:hover {
+    color: $white;
+    background-color: darken($green, $percentage);
+  }
+  @media only screen and (max-height: 359px) {
+    padding: 1.6rem 2.8rem;
+    font-size: 1.2rem;
+  }
+}
