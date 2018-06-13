@@ -1,0 +1,4 @@
+Sitemap: /sitemap.xml
+
+Disallow: /404.html
+Noindex: /404.html
