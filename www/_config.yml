@@ -1,6 +1,6 @@
 # Site data
 title: Josh Cummings | Web Developer
-description: Hi, my name is Josh Cummings and I'm a full-stack JavaScript developer from San Diego, CA.
+description: Hi, my name is Josh Cummings and I'm a front-end developer from San Diego, CA.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://joshcummingsdesign.com" # the base hostname & protocol for your site
 blog-link: "https://medium.com/@joshcummingsdesign"
