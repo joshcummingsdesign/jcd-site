@@ -52,9 +52,6 @@ sbw:
 ssh:
 	@bin/tasks/ssh.sh
 
-ssh-prod:
-	@bin/tasks/ssh-prod.sh
-
 rebuild:
 	@bin/tasks/rebuild.sh
 
