@@ -84,8 +84,6 @@ help:
 	@echo "		- Sync, Build, Watch"
 	@echo "	make ssh"
 	@echo "		- SSH into the container"
-	@echo "	make ssh-prod"
-	@echo "		- SSH into the prod server"
 	@echo "	make rebuild"
 	@echo "		- Rebuild and restart the container"
 	@echo "	make stop"
