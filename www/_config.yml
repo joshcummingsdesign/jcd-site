@@ -1,12 +1,11 @@
 # Site data
-title: Josh Cummings | Front-End Developer
-description: Hi, my name is Josh Cummings and I'm a front-end developer from San Diego, CA.
+title: Josh Cummings | Web Developer
+description: Hi, my name is Josh Cummings and I'm a web developer from San Diego, CA.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://joshcummingsdesign.com" # the base hostname & protocol for your site
 blog-link: "https://medium.com/@joshcummingsdesign"
 work-link: "https://dribbble.com/joshcummingsdesign"
 twitter: jcummingsdesign
-linkedin: joshcummingsdesign
 instagram: jcummingsdesign
 codepen: joshcummingsdesign
 dribbble: joshcummingsdesign
