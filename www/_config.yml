@@ -5,7 +5,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://joshcummingsdesign.com" # the base hostname & protocol for your site
 blog-link: "https://medium.com/@joshcummingsdesign"
 work-link: "https://dribbble.com/joshcummingsdesign"
-twitter: jcummingsdesign
 linkedin: joshcummingsdesign
 codepen: joshcummingsdesign
 dribbble: joshcummingsdesign
@@ -29,7 +28,7 @@ exclude:
   - gulpfile.js
   - package.json
   - package-lock.json
-include: ['.htaccess']
+include: [".htaccess"]
 
 # Markdown settings
 markdown: kramdown
