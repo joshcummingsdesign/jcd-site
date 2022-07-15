@@ -13,8 +13,7 @@ node_modules
 .sass-cache
 .jekyll-metadata
 npm-debug.log
-vendor
-!src/js/vendor
+/vendor
 
 #### Public ####
 html
