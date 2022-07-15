@@ -1,5 +1,6 @@
 #### System Files ####
 .DS_Store
+.tool-versions
 
 #### Editor Files ####
 .idea
@@ -13,7 +14,7 @@ node_modules
 .jekyll-metadata
 npm-debug.log
 vendor
-!src/scripts/vendor
+!src/js/vendor
 
 #### Public ####
 html
