@@ -3,12 +3,6 @@
 set -e
 trap "exit" INT
 
-echo "Checking for vulnerabilities..."
-echo
-npm audit
-echo
-echo "==========================="
-echo
 echo "Validating html..."
 echo
 if [[ $CI == true ]]; then

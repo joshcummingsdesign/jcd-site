@@ -4,6 +4,7 @@
   "scripts": {
     "build": "scripty",
     "dev": "mix watch",
+    "bundler": "scripty",
     "prod": "mix --production",
     "serve": "scripty",
     "test": "scripty"

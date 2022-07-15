@@ -23,7 +23,7 @@ My Website
 
 5. Install bundler dependencies
 
-        npm run build
+        npm run bundler
 
 6. Run the Jekyll server in one terminal window
 
