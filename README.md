@@ -1,23 +1,45 @@
 # Josh Cumming Design
 
-### Requirements
+My Website
 
-[Docker CE](https://www.docker.com/community-edition/)
+## Requirements
 
-### Getting Started
+- [Lando](https://lando.dev/) ^3.6.0
+- [Node](https://nodejs.org) ^18.3.0
 
-    $ make start
-    $ make watch
-    $ make stop
+## Getting Started
 
-### Get blog posts from Medium
+1. Copy `.env.example` to `.env` and update the values
 
-    $ make medium
+        cp .env.example .env
 
-### Update lock files
+2. Start the services
 
-    $ make update-deps
+        lando start
 
-### Help
+4. Install npm dependencies
 
-    $ make help
+        npm install
+
+5. Install bundler dependencies
+
+        npm run build
+
+6. Run the Jekyll server in one terminal window
+
+        npm run serve
+
+7. Start the project watcher in another terminal window
+
+        npm run dev
+
+## Testing
+
+Run tests
+
+    npm run test
+
+## Versioning
+
+Releases use Calendar Versioning with the format `Year.Quarter.Index` where the index is zero-based. For example, the
+first change in Q4 2020 would be `2020.4.0`.
