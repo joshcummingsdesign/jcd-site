@@ -1,0 +1,27 @@
+{
+  "name": "jcd-site",
+  "private": true,
+  "scripts": {
+    "build": "scripty",
+    "bundler": "scripty",
+    "dev": "mix watch",
+    "medium": "node scripts/medium",
+    "prod": "mix --production",
+    "serve": "scripty",
+    "test": "scripty"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "laravel-mix": "^6.0.49",
+    "prettier": "^2.7.1",
+    "request": "^2.88.2",
+    "resolve-url-loader": "^5.0.0",
+    "rss-to-json": "^2.0.2",
+    "sass": "^1.52.3",
+    "sass-loader": "^12.1.0",
+    "scripty": "^2.1.0"
+  }
+}

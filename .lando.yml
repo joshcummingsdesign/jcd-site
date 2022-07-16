@@ -1,0 +1,12 @@
+name: jcd-site
+services:
+  appserver:
+    type: ruby:2.4.3
+    build_as_root:
+      - export LANG=en_US.UTF-8 && export LANGUAGE=en_US.UTF-8 export LC_ALL=en_US.UTF-8
+    overrides:
+      ports:
+        - 4000:4000
+proxy:
+  appserver:
+    - jcd-site.lndo.site:4000

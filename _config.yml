@@ -1,0 +1,40 @@
+# Site data
+title: Josh Cummings | Web Developer
+description: Hi, my name is Josh Cummings and I'm a web developer from San Diego, CA.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://joshcummingsdesign.com" # the base hostname & protocol for your site
+blog-link: "https://medium.com/@joshcummingsdesign"
+work-link: "https://dribbble.com/joshcummingsdesign"
+linkedin: joshcummingsdesign
+codepen: joshcummingsdesign
+dribbble: joshcummingsdesign
+github: joshcummingsdesign
+
+# Build settings
+source: "."
+destination: _site
+layouts_dir: src/templates/_layouts
+includes_dir: src/templates/_includes
+data_dir: src/templates/_data
+exclude:
+  - _site
+  - node_modules
+  - scripts
+  - vendor
+  - src
+  - Gemfile
+  - Gemfile.lock
+  - medium.js
+  - package.json
+  - package-lock.json
+  - README.md
+  - webpack.mix.js
+include: [".htaccess"]
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  auto_ids: false
+
+# Server settings
+host: 0.0.0.0

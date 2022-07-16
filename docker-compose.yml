@@ -1,7 +1,0 @@
-version: '2.2'
-services:
-  site:
-    build: ./
-    container_name: jcd_1
-    ports:
-      - 3000:3000
