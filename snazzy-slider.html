@@ -6,49 +6,353 @@ permalink: /snazzy-slider/
 excerpt: Snazzy Slider is a plugin for WordPress that allows you to quickly and easily create beautiful responsive sliders that are accessible and customizable.
 image: /assets/images/snazzy-slider.png
 ---
+
 <style>
-  .site-header,.snzysldr-controls__dot{box-shadow:2px 2px 2px rgba(0,0,0,.3)}body,html{height:100%}body{font-size:16px;font-family:Roboto,Georgia,Times,"Times New Roman",serif}*,h1,h2,h3,h4,p{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-family:"Roboto Mono","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif}h1{font-size:2em;line-height:.5}a{text-decoration:none}.site-links__item:focus p,.snzysldr-read-more a{text-decoration:underline}p{line-height:1.4;font-size:1.0625em}.snzysldr-slider-wrap{display:none}.site-header h1,.snzysldr-controls,.snzysldr-controls__dots,.snzysldr-dot-wrap,footer p{display:inline-block}.site-header{background-color:#000;color:#fff;position:fixed;top:0;left:0;width:100%;z-index:4;font-size:.625em;height:40px}.site-header__items{max-width:1080px;padding:0 2.5em 0 1.5em;margin:0 auto}.site-header h1{height:40px;line-height:40px}.snzysldr-header-links{float:right;margin-top:5px}.snzysldr-logo-wrap{margin-top:2px;margin-right:.5em;float:left}.snzysldr-twitter{margin-right:2em;position:relative;top:2px}footer{color:#aaa;font-size:.75em;text-align:center;padding:0 .75em}footer p{padding:1.25em 0}footer p:first-child{padding-bottom:0}footer p:last-child{padding-top:.25em}.snzysldr-slider{width:100%;overflow:hidden;padding:0}.snzysldr-slider__slides{width:9999px;height:100%;margin:0;padding:0;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.snzysldr-slider__image{float:left;margin:0;list-style-type:none;height:100%;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0)}.snzysldr-controls-wrap{height:50px;margin:-50px auto 0;position:relative;z-index:3;padding:0 10px;cursor:default;max-width:1080px;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.snzysldr-controls svg{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.snzysldr-controls *{cursor:pointer;outline:0;padding:0}.snzysldr-controls__left-btn,.snzysldr-controls__right-btn{display:inline-block;height:50px}.snzysldr-controls__dots{vertical-align:top;height:50px;margin:0 8px;padding:0;position:relative}.snzysldr-controls__dot{box-sizing:border-box;height:100%;width:100%;border-width:2px;border-style:solid;border-radius:100%;list-style-type:none;-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0;-webkit-padding-start:0;border-color:#fff;transition:background-color .3s ease-in-out}.snzysldr-controls__dot:focus,.snzysldr-controls__dot:hover{border-color:tomato}.snzysldr-dot-wrap{float:left;height:13px;width:13px;padding:0;margin:18px 18px 0 0}.snzysldr-dot-wrap:last-child{margin:18px 0 0}.snzysldr-text{position:relative;z-index:3;padding:0}.snzysldr-text__background{overflow:hidden;padding:0;box-shadow:5px 5px 5px rgba(0,0,0,.5)}.snzysldr-text__container{width:9999px;padding:0}.snzysldr-text__project{float:left;width:720px}.snzysldr-text__project-text{padding:1.5em;max-width:768px;margin:0 auto}.snzysldr-text__project-text p{padding:0;margin:0}.snzysldr-text__project-text h1{padding:0;margin:.25em 0 .75em}.snzysldr-read-more{margin:.75em 0 0;font-size:1em;padding:0}.snzysldr-read-more a:hover{color:#fff!important}.snzysldr-text-shown{display:block}.site-links__item{font-family:'Roboto Mono','Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;background-color:#f5f5f5;width:100%;float:left;height:4em;text-align:center;color:#000;position:relative;z-index:2;box-shadow:5px 5px 5px rgba(0,0,0,.5);top:-5px;transition:top .2s ease-in-out;outline:0}.site-links__item p{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);font-size:1em}.site-links__item:focus,.site-links__item:hover{top:0}.site-links__item:nth-child(even){float:right;background-color:#cdcfd2;position:relative;z-index:1;top:-10px}.site-links__item:nth-child(even):focus,.site-links__item:nth-child(even):hover{top:-5px}.snzysldr-dot-highlighted{background-color:tomato}.snzysldr-controls__left-btn:focus .snzysldr-controls__btn-fill,.snzysldr-controls__left-btn:hover .snzysldr-controls__btn-fill,.snzysldr-controls__right-btn:focus .snzysldr-controls__btn-fill,.snzysldr-controls__right-btn:hover .snzysldr-controls__btn-fill{fill:tomato}
+  .site-header,
+  .snzysldr-controls__dot {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  body,
+  html {
+    height: 100%;
+  }
+  body {
+    font-size: 16px;
+    font-family: Roboto, Georgia, Times, 'Times New Roman', serif;
+  }
+  *,
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Roboto Mono', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  }
+  h1 {
+    font-size: 2em;
+    line-height: 0.5;
+  }
+  a {
+    text-decoration: none;
+  }
+  .site-links__item:focus p,
+  .snzysldr-read-more a {
+    text-decoration: underline;
+  }
+  p {
+    line-height: 1.4;
+    font-size: 1.0625em;
+  }
+  .snzysldr-slider-wrap {
+    display: none;
+  }
+  .site-header h1,
+  .snzysldr-controls,
+  .snzysldr-controls__dots,
+  .snzysldr-dot-wrap,
+  footer p {
+    display: inline-block;
+  }
+  .site-header {
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    font-size: 0.625em;
+    height: 40px;
+  }
+  .site-header__items {
+    max-width: 1080px;
+    padding: 0 2.5em 0 1.5em;
+    margin: 0 auto;
+  }
+  .site-header h1 {
+    height: 40px;
+    line-height: 40px;
+  }
+  .snzysldr-header-links {
+    float: right;
+    margin-top: 5px;
+  }
+  .snzysldr-logo-wrap {
+    margin-top: 2px;
+    margin-right: 0.5em;
+    float: left;
+  }
+  footer {
+    color: #aaa;
+    font-size: 0.75em;
+    text-align: center;
+    padding: 0 0.75em;
+  }
+  footer p {
+    padding: 1.25em 0;
+  }
+  footer p:first-child {
+    padding-bottom: 0;
+  }
+  footer p:last-child {
+    padding-top: 0.25em;
+  }
+  .snzysldr-slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+  }
+  .snzysldr-slider__slides {
+    width: 9999px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .snzysldr-slider__image {
+    float: left;
+    margin: 0;
+    list-style-type: none;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .snzysldr-controls-wrap {
+    height: 50px;
+    margin: -50px auto 0;
+    position: relative;
+    z-index: 3;
+    padding: 0 10px;
+    cursor: default;
+    max-width: 1080px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .snzysldr-controls svg {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .snzysldr-controls * {
+    cursor: pointer;
+    outline: 0;
+    padding: 0;
+  }
+  .snzysldr-controls__left-btn,
+  .snzysldr-controls__right-btn {
+    display: inline-block;
+    height: 50px;
+  }
+  .snzysldr-controls__dots {
+    vertical-align: top;
+    height: 50px;
+    margin: 0 8px;
+    padding: 0;
+    position: relative;
+  }
+  .snzysldr-controls__dot {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 100%;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+    border-color: #fff;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .snzysldr-controls__dot:focus,
+  .snzysldr-controls__dot:hover {
+    border-color: tomato;
+  }
+  .snzysldr-dot-wrap {
+    float: left;
+    height: 13px;
+    width: 13px;
+    padding: 0;
+    margin: 18px 18px 0 0;
+  }
+  .snzysldr-dot-wrap:last-child {
+    margin: 18px 0 0;
+  }
+  .snzysldr-text {
+    position: relative;
+    z-index: 3;
+    padding: 0;
+  }
+  .snzysldr-text__background {
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  .snzysldr-text__container {
+    width: 9999px;
+    padding: 0;
+  }
+  .snzysldr-text__project {
+    float: left;
+    width: 720px;
+  }
+  .snzysldr-text__project-text {
+    padding: 1.5em;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .snzysldr-text__project-text p {
+    padding: 0;
+    margin: 0;
+  }
+  .snzysldr-text__project-text h1 {
+    padding: 0;
+    margin: 0.25em 0 0.75em;
+  }
+  .snzysldr-read-more {
+    margin: 0.75em 0 0;
+    font-size: 1em;
+    padding: 0;
+  }
+  .snzysldr-read-more a:hover {
+    color: #fff !important;
+  }
+  .snzysldr-text-shown {
+    display: block;
+  }
+  .site-links__item {
+    font-family: 'Roboto Mono', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    background-color: #f5f5f5;
+    width: 100%;
+    float: left;
+    height: 4em;
+    text-align: center;
+    color: #000;
+    position: relative;
+    z-index: 2;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    top: -5px;
+    transition: top 0.2s ease-in-out;
+    outline: 0;
+  }
+  .site-links__item p {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 1em;
+  }
+  .site-links__item:focus,
+  .site-links__item:hover {
+    top: 0;
+  }
+  .site-links__item:nth-child(even) {
+    float: right;
+    background-color: #cdcfd2;
+    position: relative;
+    z-index: 1;
+    top: -10px;
+  }
+  .site-links__item:nth-child(even):focus,
+  .site-links__item:nth-child(even):hover {
+    top: -5px;
+  }
+  .snzysldr-dot-highlighted {
+    background-color: tomato;
+  }
+  .snzysldr-controls__left-btn:focus .snzysldr-controls__btn-fill,
+  .snzysldr-controls__left-btn:hover .snzysldr-controls__btn-fill,
+  .snzysldr-controls__right-btn:focus .snzysldr-controls__btn-fill,
+  .snzysldr-controls__right-btn:hover .snzysldr-controls__btn-fill {
+    fill: tomato;
+  }
 </style>
 
 <header class="site-header" role="banner">
   <div class="site-header__items">
     <div class="snzysldr-logo-wrap">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 0 500 500" height="36px" width="36px" xml:space="preserve" aria-labelledby="snzysldr-logo-title" role="img">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 500 500"
+        height="36px"
+        width="36px"
+        xml:space="preserve"
+        aria-labelledby="snzysldr-logo-title"
+        role="img"
+      >
         <title id="snzysldr-logo-title">Snazzy Slider Logo</title>
-        <polygon fill="none" stroke="#FFFFFF" stroke-width="20" stroke-miterlimit="10" points="421.3,348.9 250,447.8 78.7,348.9 78.7,151.1 250,52.2 421.3,151.1 	"/>
-        <path fill="#FFFFFF" d="M301,278.6c0,9-2.3,17.1-6.9,24.1c-4.6,7-11.2,12.5-19.8,16.3c-8.6,3.9-18.8,5.8-30.4,5.8
+        <polygon
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="20"
+          stroke-miterlimit="10"
+          points="421.3,348.9 250,447.8 78.7,348.9 78.7,151.1 250,52.2 421.3,151.1 	"
+        />
+        <path
+          fill="#FFFFFF"
+          d="M301,278.6c0,9-2.3,17.1-6.9,24.1c-4.6,7-11.2,12.5-19.8,16.3c-8.6,3.9-18.8,5.8-30.4,5.8
           c-9.7,0-17.8-0.7-24.4-2s-13.4-3.7-20.5-7.1v-35.1c7.5,3.9,15.3,6.9,23.4,9c8.1,2.2,15.5,3.2,22.3,3.2c5.8,0,10.1-1,12.9-3
           c2.7-2,4.1-4.6,4.1-7.8c0-2-0.5-3.7-1.6-5.2c-1.1-1.5-2.9-3-5.3-4.5c-2.4-1.5-8.9-4.6-19.4-9.4c-9.5-4.3-16.6-8.5-21.4-12.6
           c-4.8-4.1-8.3-8.7-10.6-14c-2.3-5.2-3.4-11.5-3.4-18.6c0-13.4,4.9-23.9,14.6-31.4c9.8-7.5,23.2-11.3,40.3-11.3
           c15.1,0,30.5,3.5,46.1,10.5L289,216c-13.6-6.2-25.4-9.4-35.3-9.4c-5.1,0-8.8,0.9-11.2,2.7c-2.3,1.8-3.5,4-3.5,6.7
-          c0,2.9,1.5,5.4,4.4,7.7c3,2.3,11,6.4,24.1,12.4c12.6,5.6,21.3,11.7,26.2,18.2C298.6,260.7,301,268.8,301,278.6z"/>
+          c0,2.9,1.5,5.4,4.4,7.7c3,2.3,11,6.4,24.1,12.4c12.6,5.6,21.3,11.7,26.2,18.2C298.6,260.7,301,268.8,301,278.6z"
+        />
       </svg>
     </div>
     <h1>Snazzy Slider</h1>
     <div class="snzysldr-header-links">
-      <a class="snzysldr-twitter" href="https://twitter.com/jcummingsdesign" aria-label="follow me on twitter">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        	 viewBox="-785 221 200 200" height="27px" width="27px" xml:space="preserve">
-        <style type="text/css">
-        	.st0{fill:#2AA9E0;}
-        </style>
-        <g transform="translate(-282.32053,-396.30734)">
-        	<path class="st0" d="M-316.9,664.1c-6.3,2.8-13.1,4.7-20.2,5.5c7.3-4.4,12.8-11.2,15.5-19.5c-6.8,4-14.3,7-22.3,8.5
-        		c-6.4-6.8-15.6-11.1-25.7-11.1c-19.4,0-35.2,15.8-35.2,35.2c0,2.8,0.3,5.4,0.9,8c-29.2-1.5-55.2-15.5-72.5-36.8
-        		c-3,5.2-4.8,11.2-4.8,17.7c0,12.2,6.2,23,15.7,29.3c-5.8-0.2-11.2-1.8-15.9-4.4c0,0.1,0,0.3,0,0.4c0,17,12.1,31.3,28.2,34.5
-        		c-3,0.8-6.1,1.2-9.3,1.2c-2.3,0-4.5-0.2-6.6-0.6c4.5,14,17.5,24.2,32.9,24.4c-12,9.4-27.2,15.1-43.7,15.1c-2.8,0-5.6-0.2-8.4-0.5
-        		c15.6,10,34.1,15.8,53.9,15.8c64.7,0,100.1-53.6,100.1-100.1c0-1.5,0-3-0.1-4.6C-327.6,677.4-321.6,671.2-316.9,664.1L-316.9,664.1
-        		z"/>
-        </g>
-        </svg>
-      </a>
-      <a class="snzysldr-download" href="https://wordpress.org/plugins/snazzy-slider/" role="button" aria-label="download">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-           viewBox="0 0 21 26" style="enable-background:new 0 0 21 26;" height="28px" width="28px" xml:space="preserve">
-          <polyline fill="none" stroke="#FFFFFF" points="7.5,5.5 0.5,5.5 0.5,25.5 20.5,25.5 20.5,5.5 13.5,5.5 "/>
-          <line stroke="#FFFFFF" x1="10.5" y1="19.3" x2="10.5" y2="0"/>
-          <polyline fill="none" stroke="#FFFFFF" points="4.7,13.6 10.5,19.3 16.3,13.6 "/>
+      <a
+        class="snzysldr-download"
+        href="https://wordpress.org/plugins/snazzy-slider/"
+        role="button"
+        aria-label="download"
+      >
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          viewBox="0 0 21 26"
+          style="enable-background: new 0 0 21 26"
+          height="28px"
+          width="28px"
+          xml:space="preserve"
+        >
+          <polyline
+            fill="none"
+            stroke="#FFFFFF"
+            points="7.5,5.5 0.5,5.5 0.5,25.5 20.5,25.5 20.5,5.5 13.5,5.5 "
+          />
+          <line stroke="#FFFFFF" x1="10.5" y1="19.3" x2="10.5" y2="0" />
+          <polyline fill="none" stroke="#FFFFFF" points="4.7,13.6 10.5,19.3 16.3,13.6 " />
         </svg>
       </a>
     </div>
@@ -56,82 +360,206 @@ image: /assets/images/snazzy-slider.png
 </header>
 
 <div class="snzysldr-slider-wrap" role="main">
-  <div class="snzysldr-slider" style="height: 540px; background-color: #000;">
+  <div class="snzysldr-slider" style="height: 540px; background-color: #000">
     <ul class="snzysldr-slider__slides">
-      <li class="snzysldr-slider__image" role="img" aria-label="project 1" style="background: #6bc17e url('/assets/images/project1.png') no-repeat center; background-size: contain;"></li>
-      <li class="snzysldr-slider__image" role="img" aria-label="project 2" style="background: #272727 url('/assets/images/project2.png') no-repeat center; background-size: contain;"></li>
-      <li class="snzysldr-slider__image" role="img" aria-label="project 3" style="background: #f4f4f4 url('/assets/images/project3.png') no-repeat center; background-size: contain;"></li>
+      <li
+        class="snzysldr-slider__image"
+        role="img"
+        aria-label="project 1"
+        style="
+          background: #6bc17e url('/assets/images/project1.png') no-repeat center;
+          background-size: contain;
+        "
+      ></li>
+      <li
+        class="snzysldr-slider__image"
+        role="img"
+        aria-label="project 2"
+        style="
+          background: #272727 url('/assets/images/project2.png') no-repeat center;
+          background-size: contain;
+        "
+      ></li>
+      <li
+        class="snzysldr-slider__image"
+        role="img"
+        aria-label="project 3"
+        style="
+          background: #f4f4f4 url('/assets/images/project3.png') no-repeat center;
+          background-size: contain;
+        "
+      ></li>
     </ul>
   </div>
-  <div class="snzysldr-controls-wrap" style="text-align: left;">
+  <div class="snzysldr-controls-wrap" style="text-align: left">
     <div class="snzysldr-controls" aria-label="image slider controls">
-      <div id="snzysldr_lft_btn" class="snzysldr-controls__left-btn" role="button" aria-label="previous tab" tabindex="0">
-        <svg focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-           viewBox="0 0 30 30" height="22px" width="22px" xml:space="preserve">
+      <div
+        id="snzysldr_lft_btn"
+        class="snzysldr-controls__left-btn"
+        role="button"
+        aria-label="previous tab"
+        tabindex="0"
+      >
+        <svg
+          focusable="false"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 30 30"
+          height="22px"
+          width="22px"
+          xml:space="preserve"
+        >
           <filter id="blur">
             <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
           </filter>
-          <path filter="url(#blur)" opacity=".3" d="M16.8,3.1c0.6-0.7,1.7-0.6,2.2,0c0.5,0.6,0.5,1.5-0.1,2.1C15.5,8.6,12.1,12,8.7,15.5l10.3,10.3c0.8,0.7,0.8,1.9,0.2,2.5
-            c-0.6,0.5-1.7,0.4-2.3-0.3C12.9,23.9,9,20.1,5.1,16.2c-0.2-0.2-0.4-0.5-0.4-0.8c0-0.3,0.3-0.6,0.5-0.8C9.3,10.8,13,6.9,16.8,3.1z"/>
-          <path class="snzysldr-controls__btn-fill" fill="#fff" d="M19.6,2.5c0.6-0.7,1.7-0.6,2.2,0c0.5,0.6,0.5,1.5-0.1,2.1c-3.4,3.4-6.8,6.8-10.3,10.3l10.3,10.3
+          <path
+            filter="url(#blur)"
+            opacity=".3"
+            d="M16.8,3.1c0.6-0.7,1.7-0.6,2.2,0c0.5,0.6,0.5,1.5-0.1,2.1C15.5,8.6,12.1,12,8.7,15.5l10.3,10.3c0.8,0.7,0.8,1.9,0.2,2.5
+            c-0.6,0.5-1.7,0.4-2.3-0.3C12.9,23.9,9,20.1,5.1,16.2c-0.2-0.2-0.4-0.5-0.4-0.8c0-0.3,0.3-0.6,0.5-0.8C9.3,10.8,13,6.9,16.8,3.1z"
+          />
+          <path
+            class="snzysldr-controls__btn-fill"
+            fill="#fff"
+            d="M19.6,2.5c0.6-0.7,1.7-0.6,2.2,0c0.5,0.6,0.5,1.5-0.1,2.1c-3.4,3.4-6.8,6.8-10.3,10.3l10.3,10.3
             c0.8,0.7,0.8,1.9,0.2,2.5c-0.6,0.5-1.7,0.4-2.3-0.3c-3.9-3.9-7.8-7.7-11.7-11.7c-0.2-0.2-0.4-0.5-0.4-0.8c0-0.3,0.3-0.6,0.5-0.8
-            C12.1,10.3,15.8,6.4,19.6,2.5z"/>
+            C12.1,10.3,15.8,6.4,19.6,2.5z"
+          />
         </svg>
       </div>
       <ul class="snzysldr-controls__dots" role="tablist">
         <div class="snzysldr-dot-wrap">
-          <li class="snzysldr-controls__dot" role="tab" aria-label="project 1" tabindex="0" aria-controls="snzysldr-text__project0"></li>
+          <li
+            class="snzysldr-controls__dot"
+            role="tab"
+            aria-label="project 1"
+            tabindex="0"
+            aria-controls="snzysldr-text__project0"
+          ></li>
         </div>
         <div class="snzysldr-dot-wrap">
-          <li class="snzysldr-controls__dot" role="tab" aria-label="project 2" tabindex="0" aria-controls="snzysldr-text__project1"></li>
+          <li
+            class="snzysldr-controls__dot"
+            role="tab"
+            aria-label="project 2"
+            tabindex="0"
+            aria-controls="snzysldr-text__project1"
+          ></li>
         </div>
         <div class="snzysldr-dot-wrap">
-          <li class="snzysldr-controls__dot" role="tab" aria-label="project 3" tabindex="0" aria-controls="snzysldr-text__project2"></li>
+          <li
+            class="snzysldr-controls__dot"
+            role="tab"
+            aria-label="project 3"
+            tabindex="0"
+            aria-controls="snzysldr-text__project2"
+          ></li>
         </div>
       </ul>
-      <div id="snzysldr_rt_btn" class="snzysldr-controls__right-btn" role="button" aria-label="next tab" tabindex="0">
-        <svg focusable="false" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-           viewBox="0 0 30 30" height="22px" width="22px" xml:space="preserve">
+      <div
+        id="snzysldr_rt_btn"
+        class="snzysldr-controls__right-btn"
+        role="button"
+        aria-label="next tab"
+        tabindex="0"
+      >
+        <svg
+          focusable="false"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 30 30"
+          height="22px"
+          width="22px"
+          xml:space="preserve"
+        >
           <filter id="blur2">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
           </filter>
-          <path filter="url(#blur2)" opacity=".3" d="M14.3,28.5c-0.6,0.7-1.7,0.6-2.2,0c-0.5-0.6-0.5-1.5,0.1-2.1c3.4-3.4,6.8-6.8,10.3-10.3L12.2,5.9C11.3,5.2,11.4,4,12,3.5
+          <path
+            filter="url(#blur2)"
+            opacity=".3"
+            d="M14.3,28.5c-0.6,0.7-1.7,0.6-2.2,0c-0.5-0.6-0.5-1.5,0.1-2.1c3.4-3.4,6.8-6.8,10.3-10.3L12.2,5.9C11.3,5.2,11.4,4,12,3.5
             C12.6,3,13.7,3,14.3,3.8c3.9,3.9,7.8,7.7,11.7,11.7c0.2,0.2,0.4,0.5,0.4,0.8c0,0.3-0.3,0.6-0.5,0.8C21.8,20.8,18.1,24.7,14.3,28.5z"
-            />
-          <path class="snzysldr-controls__btn-fill" fill="#fff" d="M11.4,27.5c-0.6,0.7-1.7,0.6-2.2,0c-0.5-0.6-0.5-1.5,0.1-2.1c3.4-3.4,6.8-6.8,10.3-10.3L9.2,4.8
+          />
+          <path
+            class="snzysldr-controls__btn-fill"
+            fill="#fff"
+            d="M11.4,27.5c-0.6,0.7-1.7,0.6-2.2,0c-0.5-0.6-0.5-1.5,0.1-2.1c3.4-3.4,6.8-6.8,10.3-10.3L9.2,4.8
             C8.4,4.1,8.4,2.9,9.1,2.4c0.6-0.5,1.7-0.4,2.3,0.3c3.9,3.9,7.8,7.7,11.7,11.7c0.2,0.2,0.4,0.5,0.4,0.8c0,0.3-0.3,0.6-0.5,0.8
-            C18.9,19.7,15.2,23.6,11.4,27.5z"/>
+            C18.9,19.7,15.2,23.6,11.4,27.5z"
+          />
         </svg>
       </div>
     </div>
   </div>
-  <div class="snzysldr-text" style="background-color: #4688f1;">
+  <div class="snzysldr-text" style="background-color: #4688f1">
     <div class="snzysldr-text__background">
       <div class="snzysldr-text__container">
-        <section id="snzysldr-text__project0" class="snzysldr-text__project snzysldr-text-shown" role="tabpanel" aria-hidden="true">
+        <section
+          id="snzysldr-text__project0"
+          class="snzysldr-text__project snzysldr-text-shown"
+          role="tabpanel"
+          aria-hidden="true"
+        >
           <div class="snzysldr-text__project-text">
-            <h1 style="color: #f7f7f7;">Project 1</h1>
-            <p style="color: #f7f7f7;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus.</p>
-            <div class="snzysldr-read-more" style="text-align: right;">
-              <a href="#" tabindex="-1" style="color: #ddd;">Read More</a>
+            <h1 style="color: #f7f7f7">Project 1</h1>
+            <p style="color: #f7f7f7">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.
+              Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend
+              nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+              Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui.
+              Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl
+              at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus.
+              Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus.
+            </p>
+            <div class="snzysldr-read-more" style="text-align: right">
+              <a href="#" tabindex="-1" style="color: #ddd">Read More</a>
             </div>
           </div>
         </section>
-        <section id="snzysldr-text__project1" class="snzysldr-text__project snzysldr-text-shown" role="tabpanel" aria-hidden="true">
+        <section
+          id="snzysldr-text__project1"
+          class="snzysldr-text__project snzysldr-text-shown"
+          role="tabpanel"
+          aria-hidden="true"
+        >
           <div class="snzysldr-text__project-text">
-            <h1 style="color: #f7f7f7;">Project 2</h1>
-            <p style="color: #f7f7f7;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus.</p>
-            <div class="snzysldr-read-more" style="text-align: right;">
-              <a href="#" tabindex="-1" style="color: #ddd;">Read More</a>
+            <h1 style="color: #f7f7f7">Project 2</h1>
+            <p style="color: #f7f7f7">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.
+              Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend
+              nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+              Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui.
+              Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl
+              at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus.
+              Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus.
+            </p>
+            <div class="snzysldr-read-more" style="text-align: right">
+              <a href="#" tabindex="-1" style="color: #ddd">Read More</a>
             </div>
           </div>
         </section>
-        <section id="snzysldr-text__project2" class="snzysldr-text__project snzysldr-text-shown" role="tabpanel" aria-hidden="true">
+        <section
+          id="snzysldr-text__project2"
+          class="snzysldr-text__project snzysldr-text-shown"
+          role="tabpanel"
+          aria-hidden="true"
+        >
           <div class="snzysldr-text__project-text">
-            <h1 style="color: #f7f7f7;">Project 3</h1>
-            <p style="color: #f7f7f7;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi. Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh. Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui. Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus. Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus.</p>
-            <div class="snzysldr-read-more" style="text-align: right;">
-              <a href="#" tabindex="-1" style="color: #ddd;">Read More</a>
+            <h1 style="color: #f7f7f7">Project 3</h1>
+            <p style="color: #f7f7f7">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam cursus. Morbi ut mi.
+              Nullam enim leo, egestas id, condimentum at, laoreet mattis, massa. Sed eleifend
+              nonummy diam. Praesent mauris ante, elementum et, bibendum at, posuere sit amet, nibh.
+              Duis tincidunt lectus quis dui viverra vestibulum. Suspendisse vulputate aliquam dui.
+              Nulla elementum dui ut augue. Aliquam vehicula mi at mauris. Maecenas placerat, nisl
+              at consequat rhoncus, sem nunc gravida justo, quis eleifend arcu velit quis lacus.
+              Morbi magna magna, tincidunt a, mattis non, imperdiet vitae, tellus.
+            </p>
+            <div class="snzysldr-read-more" style="text-align: right">
+              <a href="#" tabindex="-1" style="color: #ddd">Read More</a>
             </div>
           </div>
         </section>
@@ -156,13 +584,943 @@ image: /assets/images/snazzy-slider.png
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
-  jQuery(document).ready(function(a){"use strict";function b(){N.removeAttr("aria-selected"),a(".snzysldr-dot-wrap:nth-child("+C+") .snzysldr-controls__dot").attr("aria-selected","true"),J.attr("aria-hidden","true"),a(".snzysldr-slider__image:nth-child("+C+")").attr("aria-hidden","false"),P.attr("aria-hidden","true"),a(".snzysldr-text__project:nth-child("+C+")").attr("aria-hidden","false"),P.find(".snzysldr-read-more a").attr("tabindex","-1");var b=0;"fade"===x?b=900:"slide"===x&&(b=300),setTimeout(function(){a(".snzysldr-text__project:nth-child("+C+")").find(".snzysldr-read-more a").attr("tabindex","0")},b)}function c(){N.removeClass("snzysldr-dot-highlighted"),a(".snzysldr-dot-wrap:nth-child("+C+") .snzysldr-controls__dot").addClass("snzysldr-dot-highlighted")}function d(a,b){I.css("transition-duration",(b/1e3).toFixed(1)+"s");var c=(0>a?"":"-")+Math.abs(a).toString();I.css({"-webkit-transform":"translate("+c+"px,0)","-ms-transform":"translate("+c+"px,0)",transform:"translate("+c+"px,0)"})}function e(a,b){P.css("transition-duration",(b/1e3).toFixed(1)+"s");var c=(0>a?"":"-")+Math.abs(a).toString();P.css({"-webkit-transform":"translate("+c+"px,0)","-ms-transform":"translate("+c+"px,0)",transform:"translate("+c+"px,0)"})}function f(){C!==O.length?(C++,b(),c()):(C=1,b(),c())}function g(){1!==C?(C--,b(),c()):(C=O.length,b(),c())}function h(){return E++,4===E?(clearInterval(v),E=1,F=0,void("fade"===w&&"fade"===x?(d(t*(C-1),0),e(t*(C-1),0),Q.animate({opacity:1},B/2)):"fade"===w&&"slide"===x?(d(t*(C-1),0),I.animate({opacity:1},B/2)):"slide"===w&&"fade"===x?(e(t*(C-1),0),P.animate({opacity:1},B/2)):"fade"===w&&"none"===x&&(d(t*(C-1),0),I.animate({opacity:1},B/2)))):void 0}function i(){F++,E=1,1>=F&&(v=setInterval(function(){h()},300))}function j(){"fade"===w&&"fade"===x?(Q.animate({opacity:0},B/2),f(),i()):"fade"===w&&"slide"===x?(C!==O.length?(z=Math.min(z+1,A-1),e(t*z,B)):(z=0,e(t*z,B)),I.animate({opacity:0},B/2),f(),i()):"slide"===w&&"fade"===x?(z=Math.min(z+1,A-1),d(t*z,B),C!==O.length&&(P.animate({opacity:0},B/2),f(),i())):"fade"===w&&"none"===x&&(C!==O.length?(z=Math.min(z+1,A-1),e(t*z,0)):(z=0,e(t*z,0)),I.animate({opacity:0},B/2),f(),i())}function k(){"fade"===w&&"fade"===x?(Q.animate({opacity:0},B/2),g(),i()):"fade"===w&&"slide"===x?(1!==C?(z=Math.max(z-1,0),e(t*z,B)):(z=A-1,e(t*z,B)),I.animate({opacity:0},B/2),g(),i()):"slide"===w&&"fade"===x?(z=Math.max(z-1,0),d(t*z,B),1!==C&&(P.animate({opacity:0},B/2),g(),i())):"fade"===w&&"none"===x&&(1!==C?(z=Math.max(z-1,0),e(t*z,0)):(z=A-1,e(t*z,0)),I.animate({opacity:0},B/2),g(),i())}function l(){z=Math.max(z-1,0),"fade"===w&&"slide"===x?k():"slide"===w&&"fade"===x?(1!==C&&k(),d(t*z,B)):"fade"===w&&"fade"===x?k():"fade"===w&&"none"===x?k():"slide"===w&&"none"===x?(d(t*z,B),e(t*z,0)):(d(t*z,B),e(t*z,B)),1!==C&&(C--,b(),c())}function m(){z=Math.min(z+1,A-1),"fade"===w&&"slide"===x?j():"slide"===w&&"fade"===x?(C!==O.length&&j(),d(t*z,B)):"fade"===w&&"fade"===x?j():"fade"===w&&"none"===x?j():"slide"===w&&"none"===x?(d(t*z,B),e(t*z,0)):(d(t*z,B),e(t*z,B)),C!==O.length&&(C++,b(),c())}function n(){z=A-1,"fade"===w&&"slide"===x?(I.animate({opacity:0},B/2),i(),e(t*z,B)):"slide"===w&&"fade"===x?(P.animate({opacity:0},B/2),i()):"fade"===w&&"fade"===x?(Q.animate({opacity:0},B/2),i()):"fade"===w&&"none"===x?(I.animate({opacity:0},B/2),i(),e(t*z,0)):"slide"===w&&"none"===x?(d(t*z,B),e(t*z,0)):(d(t*z,B),e(t*z,B)),C=O.length,b(),c()}function o(){z=0,"fade"===w&&"slide"===x?(I.animate({opacity:0},B/2),i(),e(t*z,B)):"slide"===w&&"fade"===x?i():"fade"===w&&"fade"===x?(Q.animate({opacity:0},B/2),i()):"fade"===w&&"none"===x?(I.animate({opacity:0},B/2),i(),e(t*z,0)):"slide"===w&&"none"===x?(d(t*z,B),e(t*z,0)):(d(t*z,B),e(t*z,B)),C=1,b(),c()}function p(){"fade"===w&&"slide"===x?(I.animate({opacity:0},B/2),i(),e(t*z,B)):"slide"===w&&"fade"===x?(P.animate({opacity:0},B/2),i(),d(t*z,B)):"fade"===w&&"fade"===x?(Q.animate({opacity:0},B/2),i()):"fade"===w&&"none"===x?(I.animate({opacity:0},B/2),i()):"slide"===w&&"none"===x?(d(t*z,B),e(t*z,0)):(d(t*z,B),e(t*z,B)),C=z+1}function q(a,b,c,e){if("move"!=b||"left"!=c&&"right"!=c||"slide"!==w)"cancel"==b&&"slide"===w?d(t*z,B):"end"==b&&("right"==c?"fade"===w&&1===C?n():"fade"===x||"fade"===w?k():l():"left"==c&&("fade"===w&&C===O.length?o():"fade"===x||"fade"===w?j():m()));else{var f=0;"left"==c?d(t*z+e,f):"right"==c&&d(t*z-e,f)}}function r(){"on"===y&&(u=setInterval(function(){"fade"===w||"fade"===x&&"slide"!==w?j():"slide"===w&&"fade"===x?(C!==O.length?(z=Math.min(z+1,A-1),d(t*z,B)):(z=0,d(t*z,B)),P.animate({opacity:0},B/2),f(),i()):C!==O.length?m():o()},D))}function s(){clearInterval(u)}var t,u,v,w="slide",x="slide",y="off",z=0,A=3,B=375,C=1,D=8e3,E=1,F=0,G={triggerOnTouchEnd:!0,swipeStatus:q,allowPageScroll:"vertical",threshold:70},H=a(".snzysldr-slider-wrap"),I=a(".snzysldr-slider__slides"),J=I.find(".snzysldr-slider__image"),K=a(".snzysldr-controls"),L=K.find(".snzysldr-controls__left-btn"),M=K.find(".snzysldr-controls__right-btn"),N=K.find(".snzysldr-controls__dot"),O=a(".snzysldr-dot-wrap"),P=a(".snzysldr-text__project"),Q=a(".snzysldr-slider__slides, .snzysldr-text__project"),R=a(".snzysldr-controls *, .site-links__item");a(function(){I.swipe(G),"on"===y&&r(),a(".snzysldr-slider__image").attr("aria-hidden","true"),a(".snzysldr-slider__image:first-child").attr("aria-hidden","false"),a(".snzysldr-dot-wrap:first-child .snzysldr-controls__dot").attr("aria-selected","true"),a(".snzysldr-dot-wrap:first-child .snzysldr-controls__dot").addClass("snzysldr-dot-highlighted"),a(".snzysldr-text__project:first-child").attr("aria-hidden","false"),a(".snzysldr-text__project:first-child").find(".snzysldr-read-more a").attr("tabindex","0")}),a(window).on("load",function(){a(".snzysldr-slider-wrap").show()}),a(window).on("load resize",function(a){t=H.width()+1,J.width(t),P.width(t),d(t*z,0),e(t*z,0)}),R.keydown(function(b){(13==b.keyCode||32==b.keyCode)&&a(this).click()}),I.on("swipe",function(){s()}),K.children().bind("click focus",function(){s()}),L.click(function(){"fade"===w||"fade"===x&&"slide"!==w?k():"slide"===w&&"fade"===x?(1!==C?(z=Math.max(z-1,0),d(t*z,B)):(z=A-1,d(t*z,B)),P.animate({opacity:0},B/2),g(),i()):1!==C?l():n()}),M.click(function(){"fade"===w||"fade"===x&&"slide"!==w?j():"slide"===w&&"fade"===x?(C!==O.length?(z=Math.min(z+1,A-1),d(t*z,B)):(z=0,d(t*z,B)),P.animate({opacity:0},B/2),f(),i()):C!==O.length?m():o()}),O.click(function(){N.removeClass("snzysldr-dot-highlighted"),a(this).find(".snzysldr-controls__dot").addClass("snzysldr-dot-highlighted"),z=a(this).index(),p(),"fade"===w&&"none"===x&&e(t*z,0),b()}),I.mouseleave(function(){a(this).mouseup()})}),function(a){"function"==typeof define&&define.amd&&define.amd.jQuery?define(["jquery"],a):a(jQuery)}(function(a){function b(b){return!b||void 0!==b.allowPageScroll||void 0===b.swipe&&void 0===b.swipeStatus||(b.allowPageScroll=k),void 0!==b.click&&void 0===b.tap&&(b.tap=b.click),b||(b={}),b=a.extend({},a.fn.swipe.defaults,b),this.each(function(){var d=a(this),e=d.data(C);e||(e=new c(this,b),d.data(C,e))})}function c(b,c){function d(b){if(!(ja()||a(b.target).closest(c.excludedElements,Sa).length>0)){var d,e=b.originalEvent?b.originalEvent:b,f=e.touches,g=f?f[0]:e;return Ta=v,f?Ua=f.length:b.preventDefault(),Ja=0,Ka=null,Qa=null,La=0,Ma=0,Na=0,Oa=1,Pa=0,Va=oa(),Ra=ra(),ha(),!f||Ua===c.fingers||c.fingers===t||R()?(la(0,g),Wa=Aa(),2==Ua&&(la(1,f[1]),Ma=Na=ua(Va[0].start,Va[1].start)),(c.swipeStatus||c.pinchStatus)&&(d=J(e,Ta))):d=!1,d===!1?(Ta=y,J(e,Ta),d):(c.hold&&(ab=setTimeout(a.proxy(function(){Sa.trigger("hold",[e.target]),c.hold&&(d=c.hold.call(Sa,e,e.target))},this),c.longTapThreshold)),ka(!0),null)}}function D(a){var b=a.originalEvent?a.originalEvent:a;if(Ta!==x&&Ta!==y&&!ia()){var d,e=b.touches,f=e?e[0]:b,g=ma(f);if(Xa=Aa(),e&&(Ua=e.length),c.hold&&clearTimeout(ab),Ta=w,2==Ua&&(0==Ma?(la(1,e[1]),Ma=Na=ua(Va[0].start,Va[1].start)):(ma(e[1]),Na=ua(Va[0].end,Va[1].end),Qa=wa(Va[0].end,Va[1].end)),Oa=va(Ma,Na),Pa=Math.abs(Ma-Na)),Ua===c.fingers||c.fingers===t||!e||R()){if(Ka=za(g.start,g.end),P(a,Ka),Ja=xa(g.start,g.end),La=ta(),pa(Ka,Ja),(c.swipeStatus||c.pinchStatus)&&(d=J(b,Ta)),!c.triggerOnTouchEnd||c.triggerOnTouchLeave){var h=!0;if(c.triggerOnTouchLeave){var i=Ba(this);h=Ca(g.end,i)}!c.triggerOnTouchEnd&&h?Ta=I(w):c.triggerOnTouchLeave&&!h&&(Ta=I(x)),(Ta==y||Ta==x)&&J(b,Ta)}}else Ta=y,J(b,Ta);d===!1&&(Ta=y,J(b,Ta))}}function E(a){var b=a.originalEvent?a.originalEvent:a,d=b.touches;return d&&d.length?(ga(),!0):(ia()&&(Ua=Za),Xa=Aa(),La=ta(),M()||!L()?(Ta=y,J(b,Ta)):c.triggerOnTouchEnd||0==c.triggerOnTouchEnd&&Ta===w?(a.preventDefault(),Ta=x,J(b,Ta)):!c.triggerOnTouchEnd&&Y()?(Ta=x,K(b,Ta,o)):Ta===w&&(Ta=y,J(b,Ta)),ka(!1),null)}function F(){Ua=0,Xa=0,Wa=0,Ma=0,Na=0,Oa=1,ha(),ka(!1)}function G(a){var b=a.originalEvent?a.originalEvent:a;c.triggerOnTouchLeave&&(Ta=I(x),J(b,Ta))}function H(){Sa.unbind(Ea,d),Sa.unbind(Ia,F),Sa.unbind(Fa,D),Sa.unbind(Ga,E),Ha&&Sa.unbind(Ha,G),ka(!1)}function I(a){var b=a,d=O(),e=L(),f=M();return!d||f?b=y:!e||a!=w||c.triggerOnTouchEnd&&!c.triggerOnTouchLeave?!e&&a==x&&c.triggerOnTouchLeave&&(b=y):b=x,b}function J(a,b){var c,d=a.touches;return V()||U()||S()||R()?((V()||U())&&(c=K(a,b,m)),(S()||R())&&c!==!1&&(c=K(a,b,n))):ea()&&c!==!1?c=K(a,b,p):fa()&&c!==!1?c=K(a,b,q):da()&&c!==!1&&(c=K(a,b,o)),b===y&&F(a),b===x&&(d?d.length||F(a):F(a)),c}function K(b,d,k){var l;if(k==m){if(Sa.trigger("swipeStatus",[d,Ka||null,Ja||0,La||0,Ua,Va]),c.swipeStatus&&(l=c.swipeStatus.call(Sa,b,d,Ka||null,Ja||0,La||0,Ua,Va),l===!1))return!1;if(d==x&&T()){if(Sa.trigger("swipe",[Ka,Ja,La,Ua,Va]),c.swipe&&(l=c.swipe.call(Sa,b,Ka,Ja,La,Ua,Va),l===!1))return!1;switch(Ka){case e:Sa.trigger("swipeLeft",[Ka,Ja,La,Ua,Va]),c.swipeLeft&&(l=c.swipeLeft.call(Sa,b,Ka,Ja,La,Ua,Va));break;case f:Sa.trigger("swipeRight",[Ka,Ja,La,Ua,Va]),c.swipeRight&&(l=c.swipeRight.call(Sa,b,Ka,Ja,La,Ua,Va));break;case g:Sa.trigger("swipeUp",[Ka,Ja,La,Ua,Va]),c.swipeUp&&(l=c.swipeUp.call(Sa,b,Ka,Ja,La,Ua,Va));break;case h:Sa.trigger("swipeDown",[Ka,Ja,La,Ua,Va]),c.swipeDown&&(l=c.swipeDown.call(Sa,b,Ka,Ja,La,Ua,Va))}}}if(k==n){if(Sa.trigger("pinchStatus",[d,Qa||null,Pa||0,La||0,Ua,Oa,Va]),c.pinchStatus&&(l=c.pinchStatus.call(Sa,b,d,Qa||null,Pa||0,La||0,Ua,Oa,Va),l===!1))return!1;if(d==x&&Q())switch(Qa){case i:Sa.trigger("pinchIn",[Qa||null,Pa||0,La||0,Ua,Oa,Va]),c.pinchIn&&(l=c.pinchIn.call(Sa,b,Qa||null,Pa||0,La||0,Ua,Oa,Va));break;case j:Sa.trigger("pinchOut",[Qa||null,Pa||0,La||0,Ua,Oa,Va]),c.pinchOut&&(l=c.pinchOut.call(Sa,b,Qa||null,Pa||0,La||0,Ua,Oa,Va))}}return k==o?(d===y||d===x)&&(clearTimeout(_a),clearTimeout(ab),Z()&&!aa()?($a=Aa(),_a=setTimeout(a.proxy(function(){$a=null,Sa.trigger("tap",[b.target]),c.tap&&(l=c.tap.call(Sa,b,b.target))},this),c.doubleTapThreshold)):($a=null,Sa.trigger("tap",[b.target]),c.tap&&(l=c.tap.call(Sa,b,b.target)))):k==p?(d===y||d===x)&&(clearTimeout(_a),$a=null,Sa.trigger("doubletap",[b.target]),c.doubleTap&&(l=c.doubleTap.call(Sa,b,b.target))):k==q&&(d===y||d===x)&&(clearTimeout(_a),$a=null,Sa.trigger("longtap",[b.target]),c.longTap&&(l=c.longTap.call(Sa,b,b.target))),l}function L(){var a=!0;return null!==c.threshold&&(a=Ja>=c.threshold),a}function M(){var a=!1;return null!==c.cancelThreshold&&null!==Ka&&(a=qa(Ka)-Ja>=c.cancelThreshold),a}function N(){return null!==c.pinchThreshold?Pa>=c.pinchThreshold:!0}function O(){var a;return a=c.maxTimeThreshold&&La>=c.maxTimeThreshold?!1:!0}function P(a,b){if(c.preventDefaultEvents!==!1)if(c.allowPageScroll===k)a.preventDefault();else{var d=c.allowPageScroll===l;switch(b){case e:(c.swipeLeft&&d||!d&&c.allowPageScroll!=r)&&a.preventDefault();break;case f:(c.swipeRight&&d||!d&&c.allowPageScroll!=r)&&a.preventDefault();break;case g:(c.swipeUp&&d||!d&&c.allowPageScroll!=s)&&a.preventDefault();break;case h:(c.swipeDown&&d||!d&&c.allowPageScroll!=s)&&a.preventDefault()}}}function Q(){var a=W(),b=X(),c=N();return a&&b&&c}function R(){return!!(c.pinchStatus||c.pinchIn||c.pinchOut)}function S(){return!(!Q()||!R())}function T(){var a=O(),b=L(),c=W(),d=X(),e=M(),f=!e&&d&&c&&b&&a;return f}function U(){return!!(c.swipe||c.swipeStatus||c.swipeLeft||c.swipeRight||c.swipeUp||c.swipeDown)}function V(){return!(!T()||!U())}function W(){return Ua===c.fingers||c.fingers===t||!z}function X(){return 0!==Va[0].end.x}function Y(){return!!c.tap}function Z(){return!!c.doubleTap}function $(){return!!c.longTap}function _(){if(null==$a)return!1;var a=Aa();return Z()&&a-$a<=c.doubleTapThreshold}function aa(){return _()}function ba(){return(1===Ua||!z)&&(isNaN(Ja)||Ja<c.threshold)}function ca(){return La>c.longTapThreshold&&u>Ja}function da(){return!(!ba()||!Y())}function ea(){return!(!_()||!Z())}function fa(){return!(!ca()||!$())}function ga(){Ya=Aa(),Za=event.touches.length+1}function ha(){Ya=0,Za=0}function ia(){var a=!1;if(Ya){var b=Aa()-Ya;b<=c.fingerReleaseThreshold&&(a=!0)}return a}function ja(){return!(Sa.data(C+"_intouch")!==!0)}function ka(a){a===!0?(Sa.bind(Fa,D),Sa.bind(Ga,E),Ha&&Sa.bind(Ha,G)):(Sa.unbind(Fa,D,!1),Sa.unbind(Ga,E,!1),Ha&&Sa.unbind(Ha,G,!1)),Sa.data(C+"_intouch",a===!0)}function la(a,b){var c=void 0!==b.identifier?b.identifier:0;return Va[a].identifier=c,Va[a].start.x=Va[a].end.x=b.pageX||b.clientX,Va[a].start.y=Va[a].end.y=b.pageY||b.clientY,Va[a]}function ma(a){var b=void 0!==a.identifier?a.identifier:0,c=na(b);return c.end.x=a.pageX||a.clientX,c.end.y=a.pageY||a.clientY,c}function na(a){for(var b=0;b<Va.length;b++)if(Va[b].identifier==a)return Va[b]}function oa(){for(var a=[],b=0;5>=b;b++)a.push({start:{x:0,y:0},end:{x:0,y:0},identifier:0});return a}function pa(a,b){b=Math.max(b,qa(a)),Ra[a].distance=b}function qa(a){return Ra[a]?Ra[a].distance:void 0}function ra(){var a={};return a[e]=sa(e),a[f]=sa(f),a[g]=sa(g),a[h]=sa(h),a}function sa(a){return{direction:a,distance:0}}function ta(){return Xa-Wa}function ua(a,b){var c=Math.abs(a.x-b.x),d=Math.abs(a.y-b.y);return Math.round(Math.sqrt(c*c+d*d))}function va(a,b){var c=b/a*1;return c.toFixed(2)}function wa(){return 1>Oa?j:i}function xa(a,b){return Math.round(Math.sqrt(Math.pow(b.x-a.x,2)+Math.pow(b.y-a.y,2)))}function ya(a,b){var c=a.x-b.x,d=b.y-a.y,e=Math.atan2(d,c),f=Math.round(180*e/Math.PI);return 0>f&&(f=360-Math.abs(f)),f}function za(a,b){var c=ya(a,b);return 45>=c&&c>=0?e:360>=c&&c>=315?e:c>=135&&225>=c?f:c>45&&135>c?h:g}function Aa(){var a=new Date;return a.getTime()}function Ba(b){b=a(b);var c=b.offset(),d={left:c.left,right:c.left+b.outerWidth(),top:c.top,bottom:c.top+b.outerHeight()};return d}function Ca(a,b){return a.x>b.left&&a.x<b.right&&a.y>b.top&&a.y<b.bottom}var Da=z||B||!c.fallbackToMouseEvents,Ea=Da?B?A?"MSPointerDown":"pointerdown":"touchstart":"mousedown",Fa=Da?B?A?"MSPointerMove":"pointermove":"touchmove":"mousemove",Ga=Da?B?A?"MSPointerUp":"pointerup":"touchend":"mouseup",Ha=Da?null:"mouseleave",Ia=B?A?"MSPointerCancel":"pointercancel":"touchcancel",Ja=0,Ka=null,La=0,Ma=0,Na=0,Oa=1,Pa=0,Qa=0,Ra=null,Sa=a(b),Ta="start",Ua=0,Va=null,Wa=0,Xa=0,Ya=0,Za=0,$a=0,_a=null,ab=null;try{Sa.bind(Ea,d),Sa.bind(Ia,F)}catch(bb){a.error("events not supported "+Ea+","+Ia+" on jQuery.swipe")}this.enable=function(){return Sa.bind(Ea,d),Sa.bind(Ia,F),Sa},this.disable=function(){return H(),Sa},this.destroy=function(){H(),Sa.data(C,null),Sa=null},this.option=function(b,d){if(void 0!==c[b]){if(void 0===d)return c[b];c[b]=d}else a.error("Option "+b+" does not exist on jQuery.swipe.options");return null}}var d="1.6.9",e="left",f="right",g="up",h="down",i="in",j="out",k="none",l="auto",m="swipe",n="pinch",o="tap",p="doubletap",q="longtap",r="horizontal",s="vertical",t="all",u=10,v="start",w="move",x="end",y="cancel",z="ontouchstart"in window,A=window.navigator.msPointerEnabled&&!window.navigator.pointerEnabled,B=window.navigator.pointerEnabled||window.navigator.msPointerEnabled,C="TouchSwipe",D={fingers:1,threshold:75,cancelThreshold:null,pinchThreshold:20,maxTimeThreshold:null,fingerReleaseThreshold:250,longTapThreshold:500,doubleTapThreshold:200,swipe:null,swipeLeft:null,swipeRight:null,swipeUp:null,swipeDown:null,swipeStatus:null,pinchIn:null,pinchOut:null,pinchStatus:null,click:null,tap:null,doubleTap:null,longTap:null,hold:null,triggerOnTouchEnd:!0,triggerOnTouchLeave:!1,allowPageScroll:"auto",fallbackToMouseEvents:!0,excludedElements:"label, button, input, select, textarea, a, .noSwipe",preventDefaultEvents:!0};a.fn.swipe=function(c){var d=a(this),e=d.data(C);if(e&&"string"==typeof c){if(e[c])return e[c].apply(this,Array.prototype.slice.call(arguments,1));a.error("Method "+c+" does not exist on jQuery.swipe")}else if(!(e||"object"!=typeof c&&c))return b.apply(this,arguments);return d},a.fn.swipe.version=d,a.fn.swipe.defaults=D,a.fn.swipe.phases={PHASE_START:v,PHASE_MOVE:w,PHASE_END:x,PHASE_CANCEL:y},a.fn.swipe.directions={LEFT:e,RIGHT:f,UP:g,DOWN:h,IN:i,OUT:j},a.fn.swipe.pageScroll={NONE:k,HORIZONTAL:r,VERTICAL:s,AUTO:l},a.fn.swipe.fingers={ONE:1,TWO:2,THREE:3,ALL:t}});
+  jQuery(document).ready(function (a) {
+    'use strict';
+    function b() {
+      N.removeAttr('aria-selected'),
+        a('.snzysldr-dot-wrap:nth-child(' + C + ') .snzysldr-controls__dot').attr(
+          'aria-selected',
+          'true'
+        ),
+        J.attr('aria-hidden', 'true'),
+        a('.snzysldr-slider__image:nth-child(' + C + ')').attr('aria-hidden', 'false'),
+        P.attr('aria-hidden', 'true'),
+        a('.snzysldr-text__project:nth-child(' + C + ')').attr('aria-hidden', 'false'),
+        P.find('.snzysldr-read-more a').attr('tabindex', '-1');
+      var b = 0;
+      'fade' === x ? (b = 900) : 'slide' === x && (b = 300),
+        setTimeout(function () {
+          a('.snzysldr-text__project:nth-child(' + C + ')')
+            .find('.snzysldr-read-more a')
+            .attr('tabindex', '0');
+        }, b);
+    }
+    function c() {
+      N.removeClass('snzysldr-dot-highlighted'),
+        a('.snzysldr-dot-wrap:nth-child(' + C + ') .snzysldr-controls__dot').addClass(
+          'snzysldr-dot-highlighted'
+        );
+    }
+    function d(a, b) {
+      I.css('transition-duration', (b / 1e3).toFixed(1) + 's');
+      var c = (0 > a ? '' : '-') + Math.abs(a).toString();
+      I.css({
+        '-webkit-transform': 'translate(' + c + 'px,0)',
+        '-ms-transform': 'translate(' + c + 'px,0)',
+        transform: 'translate(' + c + 'px,0)',
+      });
+    }
+    function e(a, b) {
+      P.css('transition-duration', (b / 1e3).toFixed(1) + 's');
+      var c = (0 > a ? '' : '-') + Math.abs(a).toString();
+      P.css({
+        '-webkit-transform': 'translate(' + c + 'px,0)',
+        '-ms-transform': 'translate(' + c + 'px,0)',
+        transform: 'translate(' + c + 'px,0)',
+      });
+    }
+    function f() {
+      C !== O.length ? (C++, b(), c()) : ((C = 1), b(), c());
+    }
+    function g() {
+      1 !== C ? (C--, b(), c()) : ((C = O.length), b(), c());
+    }
+    function h() {
+      return (
+        E++,
+        4 === E
+          ? (clearInterval(v),
+            (E = 1),
+            (F = 0),
+            void ('fade' === w && 'fade' === x
+              ? (d(t * (C - 1), 0), e(t * (C - 1), 0), Q.animate({ opacity: 1 }, B / 2))
+              : 'fade' === w && 'slide' === x
+              ? (d(t * (C - 1), 0), I.animate({ opacity: 1 }, B / 2))
+              : 'slide' === w && 'fade' === x
+              ? (e(t * (C - 1), 0), P.animate({ opacity: 1 }, B / 2))
+              : 'fade' === w &&
+                'none' === x &&
+                (d(t * (C - 1), 0), I.animate({ opacity: 1 }, B / 2))))
+          : void 0
+      );
+    }
+    function i() {
+      F++,
+        (E = 1),
+        1 >= F &&
+          (v = setInterval(function () {
+            h();
+          }, 300));
+    }
+    function j() {
+      'fade' === w && 'fade' === x
+        ? (Q.animate({ opacity: 0 }, B / 2), f(), i())
+        : 'fade' === w && 'slide' === x
+        ? (C !== O.length ? ((z = Math.min(z + 1, A - 1)), e(t * z, B)) : ((z = 0), e(t * z, B)),
+          I.animate({ opacity: 0 }, B / 2),
+          f(),
+          i())
+        : 'slide' === w && 'fade' === x
+        ? ((z = Math.min(z + 1, A - 1)),
+          d(t * z, B),
+          C !== O.length && (P.animate({ opacity: 0 }, B / 2), f(), i()))
+        : 'fade' === w &&
+          'none' === x &&
+          (C !== O.length ? ((z = Math.min(z + 1, A - 1)), e(t * z, 0)) : ((z = 0), e(t * z, 0)),
+          I.animate({ opacity: 0 }, B / 2),
+          f(),
+          i());
+    }
+    function k() {
+      'fade' === w && 'fade' === x
+        ? (Q.animate({ opacity: 0 }, B / 2), g(), i())
+        : 'fade' === w && 'slide' === x
+        ? (1 !== C ? ((z = Math.max(z - 1, 0)), e(t * z, B)) : ((z = A - 1), e(t * z, B)),
+          I.animate({ opacity: 0 }, B / 2),
+          g(),
+          i())
+        : 'slide' === w && 'fade' === x
+        ? ((z = Math.max(z - 1, 0)),
+          d(t * z, B),
+          1 !== C && (P.animate({ opacity: 0 }, B / 2), g(), i()))
+        : 'fade' === w &&
+          'none' === x &&
+          (1 !== C ? ((z = Math.max(z - 1, 0)), e(t * z, 0)) : ((z = A - 1), e(t * z, 0)),
+          I.animate({ opacity: 0 }, B / 2),
+          g(),
+          i());
+    }
+    function l() {
+      (z = Math.max(z - 1, 0)),
+        'fade' === w && 'slide' === x
+          ? k()
+          : 'slide' === w && 'fade' === x
+          ? (1 !== C && k(), d(t * z, B))
+          : 'fade' === w && 'fade' === x
+          ? k()
+          : 'fade' === w && 'none' === x
+          ? k()
+          : 'slide' === w && 'none' === x
+          ? (d(t * z, B), e(t * z, 0))
+          : (d(t * z, B), e(t * z, B)),
+        1 !== C && (C--, b(), c());
+    }
+    function m() {
+      (z = Math.min(z + 1, A - 1)),
+        'fade' === w && 'slide' === x
+          ? j()
+          : 'slide' === w && 'fade' === x
+          ? (C !== O.length && j(), d(t * z, B))
+          : 'fade' === w && 'fade' === x
+          ? j()
+          : 'fade' === w && 'none' === x
+          ? j()
+          : 'slide' === w && 'none' === x
+          ? (d(t * z, B), e(t * z, 0))
+          : (d(t * z, B), e(t * z, B)),
+        C !== O.length && (C++, b(), c());
+    }
+    function n() {
+      (z = A - 1),
+        'fade' === w && 'slide' === x
+          ? (I.animate({ opacity: 0 }, B / 2), i(), e(t * z, B))
+          : 'slide' === w && 'fade' === x
+          ? (P.animate({ opacity: 0 }, B / 2), i())
+          : 'fade' === w && 'fade' === x
+          ? (Q.animate({ opacity: 0 }, B / 2), i())
+          : 'fade' === w && 'none' === x
+          ? (I.animate({ opacity: 0 }, B / 2), i(), e(t * z, 0))
+          : 'slide' === w && 'none' === x
+          ? (d(t * z, B), e(t * z, 0))
+          : (d(t * z, B), e(t * z, B)),
+        (C = O.length),
+        b(),
+        c();
+    }
+    function o() {
+      (z = 0),
+        'fade' === w && 'slide' === x
+          ? (I.animate({ opacity: 0 }, B / 2), i(), e(t * z, B))
+          : 'slide' === w && 'fade' === x
+          ? i()
+          : 'fade' === w && 'fade' === x
+          ? (Q.animate({ opacity: 0 }, B / 2), i())
+          : 'fade' === w && 'none' === x
+          ? (I.animate({ opacity: 0 }, B / 2), i(), e(t * z, 0))
+          : 'slide' === w && 'none' === x
+          ? (d(t * z, B), e(t * z, 0))
+          : (d(t * z, B), e(t * z, B)),
+        (C = 1),
+        b(),
+        c();
+    }
+    function p() {
+      'fade' === w && 'slide' === x
+        ? (I.animate({ opacity: 0 }, B / 2), i(), e(t * z, B))
+        : 'slide' === w && 'fade' === x
+        ? (P.animate({ opacity: 0 }, B / 2), i(), d(t * z, B))
+        : 'fade' === w && 'fade' === x
+        ? (Q.animate({ opacity: 0 }, B / 2), i())
+        : 'fade' === w && 'none' === x
+        ? (I.animate({ opacity: 0 }, B / 2), i())
+        : 'slide' === w && 'none' === x
+        ? (d(t * z, B), e(t * z, 0))
+        : (d(t * z, B), e(t * z, B)),
+        (C = z + 1);
+    }
+    function q(a, b, c, e) {
+      if ('move' != b || ('left' != c && 'right' != c) || 'slide' !== w)
+        'cancel' == b && 'slide' === w
+          ? d(t * z, B)
+          : 'end' == b &&
+            ('right' == c
+              ? 'fade' === w && 1 === C
+                ? n()
+                : 'fade' === x || 'fade' === w
+                ? k()
+                : l()
+              : 'left' == c &&
+                ('fade' === w && C === O.length ? o() : 'fade' === x || 'fade' === w ? j() : m()));
+      else {
+        var f = 0;
+        'left' == c ? d(t * z + e, f) : 'right' == c && d(t * z - e, f);
+      }
+    }
+    function r() {
+      'on' === y &&
+        (u = setInterval(function () {
+          'fade' === w || ('fade' === x && 'slide' !== w)
+            ? j()
+            : 'slide' === w && 'fade' === x
+            ? (C !== O.length
+                ? ((z = Math.min(z + 1, A - 1)), d(t * z, B))
+                : ((z = 0), d(t * z, B)),
+              P.animate({ opacity: 0 }, B / 2),
+              f(),
+              i())
+            : C !== O.length
+            ? m()
+            : o();
+        }, D));
+    }
+    function s() {
+      clearInterval(u);
+    }
+    var t,
+      u,
+      v,
+      w = 'slide',
+      x = 'slide',
+      y = 'off',
+      z = 0,
+      A = 3,
+      B = 375,
+      C = 1,
+      D = 8e3,
+      E = 1,
+      F = 0,
+      G = { triggerOnTouchEnd: !0, swipeStatus: q, allowPageScroll: 'vertical', threshold: 70 },
+      H = a('.snzysldr-slider-wrap'),
+      I = a('.snzysldr-slider__slides'),
+      J = I.find('.snzysldr-slider__image'),
+      K = a('.snzysldr-controls'),
+      L = K.find('.snzysldr-controls__left-btn'),
+      M = K.find('.snzysldr-controls__right-btn'),
+      N = K.find('.snzysldr-controls__dot'),
+      O = a('.snzysldr-dot-wrap'),
+      P = a('.snzysldr-text__project'),
+      Q = a('.snzysldr-slider__slides, .snzysldr-text__project'),
+      R = a('.snzysldr-controls *, .site-links__item');
+    a(function () {
+      I.swipe(G),
+        'on' === y && r(),
+        a('.snzysldr-slider__image').attr('aria-hidden', 'true'),
+        a('.snzysldr-slider__image:first-child').attr('aria-hidden', 'false'),
+        a('.snzysldr-dot-wrap:first-child .snzysldr-controls__dot').attr('aria-selected', 'true'),
+        a('.snzysldr-dot-wrap:first-child .snzysldr-controls__dot').addClass(
+          'snzysldr-dot-highlighted'
+        ),
+        a('.snzysldr-text__project:first-child').attr('aria-hidden', 'false'),
+        a('.snzysldr-text__project:first-child')
+          .find('.snzysldr-read-more a')
+          .attr('tabindex', '0');
+    }),
+      a(window).on('load', function () {
+        a('.snzysldr-slider-wrap').show();
+      }),
+      a(window).on('load resize', function (a) {
+        (t = H.width() + 1), J.width(t), P.width(t), d(t * z, 0), e(t * z, 0);
+      }),
+      R.keydown(function (b) {
+        (13 == b.keyCode || 32 == b.keyCode) && a(this).click();
+      }),
+      I.on('swipe', function () {
+        s();
+      }),
+      K.children().bind('click focus', function () {
+        s();
+      }),
+      L.click(function () {
+        'fade' === w || ('fade' === x && 'slide' !== w)
+          ? k()
+          : 'slide' === w && 'fade' === x
+          ? (1 !== C ? ((z = Math.max(z - 1, 0)), d(t * z, B)) : ((z = A - 1), d(t * z, B)),
+            P.animate({ opacity: 0 }, B / 2),
+            g(),
+            i())
+          : 1 !== C
+          ? l()
+          : n();
+      }),
+      M.click(function () {
+        'fade' === w || ('fade' === x && 'slide' !== w)
+          ? j()
+          : 'slide' === w && 'fade' === x
+          ? (C !== O.length ? ((z = Math.min(z + 1, A - 1)), d(t * z, B)) : ((z = 0), d(t * z, B)),
+            P.animate({ opacity: 0 }, B / 2),
+            f(),
+            i())
+          : C !== O.length
+          ? m()
+          : o();
+      }),
+      O.click(function () {
+        N.removeClass('snzysldr-dot-highlighted'),
+          a(this).find('.snzysldr-controls__dot').addClass('snzysldr-dot-highlighted'),
+          (z = a(this).index()),
+          p(),
+          'fade' === w && 'none' === x && e(t * z, 0),
+          b();
+      }),
+      I.mouseleave(function () {
+        a(this).mouseup();
+      });
+  }),
+    (function (a) {
+      'function' == typeof define && define.amd && define.amd.jQuery
+        ? define(['jquery'], a)
+        : a(jQuery);
+    })(function (a) {
+      function b(b) {
+        return (
+          !b ||
+            void 0 !== b.allowPageScroll ||
+            (void 0 === b.swipe && void 0 === b.swipeStatus) ||
+            (b.allowPageScroll = k),
+          void 0 !== b.click && void 0 === b.tap && (b.tap = b.click),
+          b || (b = {}),
+          (b = a.extend({}, a.fn.swipe.defaults, b)),
+          this.each(function () {
+            var d = a(this),
+              e = d.data(C);
+            e || ((e = new c(this, b)), d.data(C, e));
+          })
+        );
+      }
+      function c(b, c) {
+        function d(b) {
+          if (!(ja() || a(b.target).closest(c.excludedElements, Sa).length > 0)) {
+            var d,
+              e = b.originalEvent ? b.originalEvent : b,
+              f = e.touches,
+              g = f ? f[0] : e;
+            return (
+              (Ta = v),
+              f ? (Ua = f.length) : b.preventDefault(),
+              (Ja = 0),
+              (Ka = null),
+              (Qa = null),
+              (La = 0),
+              (Ma = 0),
+              (Na = 0),
+              (Oa = 1),
+              (Pa = 0),
+              (Va = oa()),
+              (Ra = ra()),
+              ha(),
+              !f || Ua === c.fingers || c.fingers === t || R()
+                ? (la(0, g),
+                  (Wa = Aa()),
+                  2 == Ua && (la(1, f[1]), (Ma = Na = ua(Va[0].start, Va[1].start))),
+                  (c.swipeStatus || c.pinchStatus) && (d = J(e, Ta)))
+                : (d = !1),
+              d === !1
+                ? ((Ta = y), J(e, Ta), d)
+                : (c.hold &&
+                    (ab = setTimeout(
+                      a.proxy(function () {
+                        Sa.trigger('hold', [e.target]),
+                          c.hold && (d = c.hold.call(Sa, e, e.target));
+                      }, this),
+                      c.longTapThreshold
+                    )),
+                  ka(!0),
+                  null)
+            );
+          }
+        }
+        function D(a) {
+          var b = a.originalEvent ? a.originalEvent : a;
+          if (Ta !== x && Ta !== y && !ia()) {
+            var d,
+              e = b.touches,
+              f = e ? e[0] : b,
+              g = ma(f);
+            if (
+              ((Xa = Aa()),
+              e && (Ua = e.length),
+              c.hold && clearTimeout(ab),
+              (Ta = w),
+              2 == Ua &&
+                (0 == Ma
+                  ? (la(1, e[1]), (Ma = Na = ua(Va[0].start, Va[1].start)))
+                  : (ma(e[1]), (Na = ua(Va[0].end, Va[1].end)), (Qa = wa(Va[0].end, Va[1].end))),
+                (Oa = va(Ma, Na)),
+                (Pa = Math.abs(Ma - Na))),
+              Ua === c.fingers || c.fingers === t || !e || R())
+            ) {
+              if (
+                ((Ka = za(g.start, g.end)),
+                P(a, Ka),
+                (Ja = xa(g.start, g.end)),
+                (La = ta()),
+                pa(Ka, Ja),
+                (c.swipeStatus || c.pinchStatus) && (d = J(b, Ta)),
+                !c.triggerOnTouchEnd || c.triggerOnTouchLeave)
+              ) {
+                var h = !0;
+                if (c.triggerOnTouchLeave) {
+                  var i = Ba(this);
+                  h = Ca(g.end, i);
+                }
+                !c.triggerOnTouchEnd && h
+                  ? (Ta = I(w))
+                  : c.triggerOnTouchLeave && !h && (Ta = I(x)),
+                  (Ta == y || Ta == x) && J(b, Ta);
+              }
+            } else (Ta = y), J(b, Ta);
+            d === !1 && ((Ta = y), J(b, Ta));
+          }
+        }
+        function E(a) {
+          var b = a.originalEvent ? a.originalEvent : a,
+            d = b.touches;
+          return d && d.length
+            ? (ga(), !0)
+            : (ia() && (Ua = Za),
+              (Xa = Aa()),
+              (La = ta()),
+              M() || !L()
+                ? ((Ta = y), J(b, Ta))
+                : c.triggerOnTouchEnd || (0 == c.triggerOnTouchEnd && Ta === w)
+                ? (a.preventDefault(), (Ta = x), J(b, Ta))
+                : !c.triggerOnTouchEnd && Y()
+                ? ((Ta = x), K(b, Ta, o))
+                : Ta === w && ((Ta = y), J(b, Ta)),
+              ka(!1),
+              null);
+        }
+        function F() {
+          (Ua = 0), (Xa = 0), (Wa = 0), (Ma = 0), (Na = 0), (Oa = 1), ha(), ka(!1);
+        }
+        function G(a) {
+          var b = a.originalEvent ? a.originalEvent : a;
+          c.triggerOnTouchLeave && ((Ta = I(x)), J(b, Ta));
+        }
+        function H() {
+          Sa.unbind(Ea, d),
+            Sa.unbind(Ia, F),
+            Sa.unbind(Fa, D),
+            Sa.unbind(Ga, E),
+            Ha && Sa.unbind(Ha, G),
+            ka(!1);
+        }
+        function I(a) {
+          var b = a,
+            d = O(),
+            e = L(),
+            f = M();
+          return (
+            !d || f
+              ? (b = y)
+              : !e || a != w || (c.triggerOnTouchEnd && !c.triggerOnTouchLeave)
+              ? !e && a == x && c.triggerOnTouchLeave && (b = y)
+              : (b = x),
+            b
+          );
+        }
+        function J(a, b) {
+          var c,
+            d = a.touches;
+          return (
+            V() || U() || S() || R()
+              ? ((V() || U()) && (c = K(a, b, m)), (S() || R()) && c !== !1 && (c = K(a, b, n)))
+              : ea() && c !== !1
+              ? (c = K(a, b, p))
+              : fa() && c !== !1
+              ? (c = K(a, b, q))
+              : da() && c !== !1 && (c = K(a, b, o)),
+            b === y && F(a),
+            b === x && (d ? d.length || F(a) : F(a)),
+            c
+          );
+        }
+        function K(b, d, k) {
+          var l;
+          if (k == m) {
+            if (
+              (Sa.trigger('swipeStatus', [d, Ka || null, Ja || 0, La || 0, Ua, Va]),
+              c.swipeStatus &&
+                ((l = c.swipeStatus.call(Sa, b, d, Ka || null, Ja || 0, La || 0, Ua, Va)),
+                l === !1))
+            )
+              return !1;
+            if (d == x && T()) {
+              if (
+                (Sa.trigger('swipe', [Ka, Ja, La, Ua, Va]),
+                c.swipe && ((l = c.swipe.call(Sa, b, Ka, Ja, La, Ua, Va)), l === !1))
+              )
+                return !1;
+              switch (Ka) {
+                case e:
+                  Sa.trigger('swipeLeft', [Ka, Ja, La, Ua, Va]),
+                    c.swipeLeft && (l = c.swipeLeft.call(Sa, b, Ka, Ja, La, Ua, Va));
+                  break;
+                case f:
+                  Sa.trigger('swipeRight', [Ka, Ja, La, Ua, Va]),
+                    c.swipeRight && (l = c.swipeRight.call(Sa, b, Ka, Ja, La, Ua, Va));
+                  break;
+                case g:
+                  Sa.trigger('swipeUp', [Ka, Ja, La, Ua, Va]),
+                    c.swipeUp && (l = c.swipeUp.call(Sa, b, Ka, Ja, La, Ua, Va));
+                  break;
+                case h:
+                  Sa.trigger('swipeDown', [Ka, Ja, La, Ua, Va]),
+                    c.swipeDown && (l = c.swipeDown.call(Sa, b, Ka, Ja, La, Ua, Va));
+              }
+            }
+          }
+          if (k == n) {
+            if (
+              (Sa.trigger('pinchStatus', [d, Qa || null, Pa || 0, La || 0, Ua, Oa, Va]),
+              c.pinchStatus &&
+                ((l = c.pinchStatus.call(Sa, b, d, Qa || null, Pa || 0, La || 0, Ua, Oa, Va)),
+                l === !1))
+            )
+              return !1;
+            if (d == x && Q())
+              switch (Qa) {
+                case i:
+                  Sa.trigger('pinchIn', [Qa || null, Pa || 0, La || 0, Ua, Oa, Va]),
+                    c.pinchIn &&
+                      (l = c.pinchIn.call(Sa, b, Qa || null, Pa || 0, La || 0, Ua, Oa, Va));
+                  break;
+                case j:
+                  Sa.trigger('pinchOut', [Qa || null, Pa || 0, La || 0, Ua, Oa, Va]),
+                    c.pinchOut &&
+                      (l = c.pinchOut.call(Sa, b, Qa || null, Pa || 0, La || 0, Ua, Oa, Va));
+              }
+          }
+          return (
+            k == o
+              ? (d === y || d === x) &&
+                (clearTimeout(_a),
+                clearTimeout(ab),
+                Z() && !aa()
+                  ? (($a = Aa()),
+                    (_a = setTimeout(
+                      a.proxy(function () {
+                        ($a = null),
+                          Sa.trigger('tap', [b.target]),
+                          c.tap && (l = c.tap.call(Sa, b, b.target));
+                      }, this),
+                      c.doubleTapThreshold
+                    )))
+                  : (($a = null),
+                    Sa.trigger('tap', [b.target]),
+                    c.tap && (l = c.tap.call(Sa, b, b.target))))
+              : k == p
+              ? (d === y || d === x) &&
+                (clearTimeout(_a),
+                ($a = null),
+                Sa.trigger('doubletap', [b.target]),
+                c.doubleTap && (l = c.doubleTap.call(Sa, b, b.target)))
+              : k == q &&
+                (d === y || d === x) &&
+                (clearTimeout(_a),
+                ($a = null),
+                Sa.trigger('longtap', [b.target]),
+                c.longTap && (l = c.longTap.call(Sa, b, b.target))),
+            l
+          );
+        }
+        function L() {
+          var a = !0;
+          return null !== c.threshold && (a = Ja >= c.threshold), a;
+        }
+        function M() {
+          var a = !1;
+          return (
+            null !== c.cancelThreshold && null !== Ka && (a = qa(Ka) - Ja >= c.cancelThreshold), a
+          );
+        }
+        function N() {
+          return null !== c.pinchThreshold ? Pa >= c.pinchThreshold : !0;
+        }
+        function O() {
+          var a;
+          return (a = c.maxTimeThreshold && La >= c.maxTimeThreshold ? !1 : !0);
+        }
+        function P(a, b) {
+          if (c.preventDefaultEvents !== !1)
+            if (c.allowPageScroll === k) a.preventDefault();
+            else {
+              var d = c.allowPageScroll === l;
+              switch (b) {
+                case e:
+                  ((c.swipeLeft && d) || (!d && c.allowPageScroll != r)) && a.preventDefault();
+                  break;
+                case f:
+                  ((c.swipeRight && d) || (!d && c.allowPageScroll != r)) && a.preventDefault();
+                  break;
+                case g:
+                  ((c.swipeUp && d) || (!d && c.allowPageScroll != s)) && a.preventDefault();
+                  break;
+                case h:
+                  ((c.swipeDown && d) || (!d && c.allowPageScroll != s)) && a.preventDefault();
+              }
+            }
+        }
+        function Q() {
+          var a = W(),
+            b = X(),
+            c = N();
+          return a && b && c;
+        }
+        function R() {
+          return !!(c.pinchStatus || c.pinchIn || c.pinchOut);
+        }
+        function S() {
+          return !(!Q() || !R());
+        }
+        function T() {
+          var a = O(),
+            b = L(),
+            c = W(),
+            d = X(),
+            e = M(),
+            f = !e && d && c && b && a;
+          return f;
+        }
+        function U() {
+          return !!(
+            c.swipe ||
+            c.swipeStatus ||
+            c.swipeLeft ||
+            c.swipeRight ||
+            c.swipeUp ||
+            c.swipeDown
+          );
+        }
+        function V() {
+          return !(!T() || !U());
+        }
+        function W() {
+          return Ua === c.fingers || c.fingers === t || !z;
+        }
+        function X() {
+          return 0 !== Va[0].end.x;
+        }
+        function Y() {
+          return !!c.tap;
+        }
+        function Z() {
+          return !!c.doubleTap;
+        }
+        function $() {
+          return !!c.longTap;
+        }
+        function _() {
+          if (null == $a) return !1;
+          var a = Aa();
+          return Z() && a - $a <= c.doubleTapThreshold;
+        }
+        function aa() {
+          return _();
+        }
+        function ba() {
+          return (1 === Ua || !z) && (isNaN(Ja) || Ja < c.threshold);
+        }
+        function ca() {
+          return La > c.longTapThreshold && u > Ja;
+        }
+        function da() {
+          return !(!ba() || !Y());
+        }
+        function ea() {
+          return !(!_() || !Z());
+        }
+        function fa() {
+          return !(!ca() || !$());
+        }
+        function ga() {
+          (Ya = Aa()), (Za = event.touches.length + 1);
+        }
+        function ha() {
+          (Ya = 0), (Za = 0);
+        }
+        function ia() {
+          var a = !1;
+          if (Ya) {
+            var b = Aa() - Ya;
+            b <= c.fingerReleaseThreshold && (a = !0);
+          }
+          return a;
+        }
+        function ja() {
+          return !(Sa.data(C + '_intouch') !== !0);
+        }
+        function ka(a) {
+          a === !0
+            ? (Sa.bind(Fa, D), Sa.bind(Ga, E), Ha && Sa.bind(Ha, G))
+            : (Sa.unbind(Fa, D, !1), Sa.unbind(Ga, E, !1), Ha && Sa.unbind(Ha, G, !1)),
+            Sa.data(C + '_intouch', a === !0);
+        }
+        function la(a, b) {
+          var c = void 0 !== b.identifier ? b.identifier : 0;
+          return (
+            (Va[a].identifier = c),
+            (Va[a].start.x = Va[a].end.x = b.pageX || b.clientX),
+            (Va[a].start.y = Va[a].end.y = b.pageY || b.clientY),
+            Va[a]
+          );
+        }
+        function ma(a) {
+          var b = void 0 !== a.identifier ? a.identifier : 0,
+            c = na(b);
+          return (c.end.x = a.pageX || a.clientX), (c.end.y = a.pageY || a.clientY), c;
+        }
+        function na(a) {
+          for (var b = 0; b < Va.length; b++) if (Va[b].identifier == a) return Va[b];
+        }
+        function oa() {
+          for (var a = [], b = 0; 5 >= b; b++)
+            a.push({ start: { x: 0, y: 0 }, end: { x: 0, y: 0 }, identifier: 0 });
+          return a;
+        }
+        function pa(a, b) {
+          (b = Math.max(b, qa(a))), (Ra[a].distance = b);
+        }
+        function qa(a) {
+          return Ra[a] ? Ra[a].distance : void 0;
+        }
+        function ra() {
+          var a = {};
+          return (a[e] = sa(e)), (a[f] = sa(f)), (a[g] = sa(g)), (a[h] = sa(h)), a;
+        }
+        function sa(a) {
+          return { direction: a, distance: 0 };
+        }
+        function ta() {
+          return Xa - Wa;
+        }
+        function ua(a, b) {
+          var c = Math.abs(a.x - b.x),
+            d = Math.abs(a.y - b.y);
+          return Math.round(Math.sqrt(c * c + d * d));
+        }
+        function va(a, b) {
+          var c = (b / a) * 1;
+          return c.toFixed(2);
+        }
+        function wa() {
+          return 1 > Oa ? j : i;
+        }
+        function xa(a, b) {
+          return Math.round(Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2)));
+        }
+        function ya(a, b) {
+          var c = a.x - b.x,
+            d = b.y - a.y,
+            e = Math.atan2(d, c),
+            f = Math.round((180 * e) / Math.PI);
+          return 0 > f && (f = 360 - Math.abs(f)), f;
+        }
+        function za(a, b) {
+          var c = ya(a, b);
+          return 45 >= c && c >= 0
+            ? e
+            : 360 >= c && c >= 315
+            ? e
+            : c >= 135 && 225 >= c
+            ? f
+            : c > 45 && 135 > c
+            ? h
+            : g;
+        }
+        function Aa() {
+          var a = new Date();
+          return a.getTime();
+        }
+        function Ba(b) {
+          b = a(b);
+          var c = b.offset(),
+            d = {
+              left: c.left,
+              right: c.left + b.outerWidth(),
+              top: c.top,
+              bottom: c.top + b.outerHeight(),
+            };
+          return d;
+        }
+        function Ca(a, b) {
+          return a.x > b.left && a.x < b.right && a.y > b.top && a.y < b.bottom;
+        }
+        var Da = z || B || !c.fallbackToMouseEvents,
+          Ea = Da ? (B ? (A ? 'MSPointerDown' : 'pointerdown') : 'touchstart') : 'mousedown',
+          Fa = Da ? (B ? (A ? 'MSPointerMove' : 'pointermove') : 'touchmove') : 'mousemove',
+          Ga = Da ? (B ? (A ? 'MSPointerUp' : 'pointerup') : 'touchend') : 'mouseup',
+          Ha = Da ? null : 'mouseleave',
+          Ia = B ? (A ? 'MSPointerCancel' : 'pointercancel') : 'touchcancel',
+          Ja = 0,
+          Ka = null,
+          La = 0,
+          Ma = 0,
+          Na = 0,
+          Oa = 1,
+          Pa = 0,
+          Qa = 0,
+          Ra = null,
+          Sa = a(b),
+          Ta = 'start',
+          Ua = 0,
+          Va = null,
+          Wa = 0,
+          Xa = 0,
+          Ya = 0,
+          Za = 0,
+          $a = 0,
+          _a = null,
+          ab = null;
+        try {
+          Sa.bind(Ea, d), Sa.bind(Ia, F);
+        } catch (bb) {
+          a.error('events not supported ' + Ea + ',' + Ia + ' on jQuery.swipe');
+        }
+        (this.enable = function () {
+          return Sa.bind(Ea, d), Sa.bind(Ia, F), Sa;
+        }),
+          (this.disable = function () {
+            return H(), Sa;
+          }),
+          (this.destroy = function () {
+            H(), Sa.data(C, null), (Sa = null);
+          }),
+          (this.option = function (b, d) {
+            if (void 0 !== c[b]) {
+              if (void 0 === d) return c[b];
+              c[b] = d;
+            } else a.error('Option ' + b + ' does not exist on jQuery.swipe.options');
+            return null;
+          });
+      }
+      var d = '1.6.9',
+        e = 'left',
+        f = 'right',
+        g = 'up',
+        h = 'down',
+        i = 'in',
+        j = 'out',
+        k = 'none',
+        l = 'auto',
+        m = 'swipe',
+        n = 'pinch',
+        o = 'tap',
+        p = 'doubletap',
+        q = 'longtap',
+        r = 'horizontal',
+        s = 'vertical',
+        t = 'all',
+        u = 10,
+        v = 'start',
+        w = 'move',
+        x = 'end',
+        y = 'cancel',
+        z = 'ontouchstart' in window,
+        A = window.navigator.msPointerEnabled && !window.navigator.pointerEnabled,
+        B = window.navigator.pointerEnabled || window.navigator.msPointerEnabled,
+        C = 'TouchSwipe',
+        D = {
+          fingers: 1,
+          threshold: 75,
+          cancelThreshold: null,
+          pinchThreshold: 20,
+          maxTimeThreshold: null,
+          fingerReleaseThreshold: 250,
+          longTapThreshold: 500,
+          doubleTapThreshold: 200,
+          swipe: null,
+          swipeLeft: null,
+          swipeRight: null,
+          swipeUp: null,
+          swipeDown: null,
+          swipeStatus: null,
+          pinchIn: null,
+          pinchOut: null,
+          pinchStatus: null,
+          click: null,
+          tap: null,
+          doubleTap: null,
+          longTap: null,
+          hold: null,
+          triggerOnTouchEnd: !0,
+          triggerOnTouchLeave: !1,
+          allowPageScroll: 'auto',
+          fallbackToMouseEvents: !0,
+          excludedElements: 'label, button, input, select, textarea, a, .noSwipe',
+          preventDefaultEvents: !0,
+        };
+      (a.fn.swipe = function (c) {
+        var d = a(this),
+          e = d.data(C);
+        if (e && 'string' == typeof c) {
+          if (e[c]) return e[c].apply(this, Array.prototype.slice.call(arguments, 1));
+          a.error('Method ' + c + ' does not exist on jQuery.swipe');
+        } else if (!(e || ('object' != typeof c && c))) return b.apply(this, arguments);
+        return d;
+      }),
+        (a.fn.swipe.version = d),
+        (a.fn.swipe.defaults = D),
+        (a.fn.swipe.phases = { PHASE_START: v, PHASE_MOVE: w, PHASE_END: x, PHASE_CANCEL: y }),
+        (a.fn.swipe.directions = { LEFT: e, RIGHT: f, UP: g, DOWN: h, IN: i, OUT: j }),
+        (a.fn.swipe.pageScroll = { NONE: k, HORIZONTAL: r, VERTICAL: s, AUTO: l }),
+        (a.fn.swipe.fingers = { ONE: 1, TWO: 2, THREE: 3, ALL: t });
+    });
 </script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    (i[r] =
+      i[r] ||
+      function () {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date());
+    (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m);
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-69467097-1', 'auto');
   ga('send', 'pageview');
 </script>
