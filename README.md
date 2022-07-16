@@ -9,27 +9,27 @@ My Website
 
 ## Getting Started
 
-1. Copy `.env.example` to `.env` and update the values
+1.  Copy `.env.example` to `.env` and update the values
 
         cp .env.example .env
 
-2. Start the services
+2.  Start the services
 
         lando start
 
-4. Install npm dependencies
+3.  Install npm dependencies
 
         npm install
 
-5. Install bundler dependencies
+4.  Install bundler dependencies
 
         npm run bundler
 
-6. Run the Jekyll server in one terminal window
+5.  Run the Jekyll server in one terminal window
 
         npm run serve
 
-7. Start the project watcher in another terminal window
+6.  Start the project watcher in another terminal window
 
         npm run dev
 
@@ -38,6 +38,12 @@ My Website
 Run tests
 
     npm run test
+
+## Medium
+
+Retrieve posts from Medium
+
+    npm run medium
 
 ## Versioning
 
